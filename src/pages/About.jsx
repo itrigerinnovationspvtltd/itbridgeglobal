@@ -209,7 +209,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="bg-gradient-to-r from-primary-orange to-primary-teal bg-clip-text text-transparent">Values</span>
+              Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Values</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               The principles that guide everything we do
@@ -252,7 +252,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Meet Our <span className="bg-gradient-to-r from-primary-teal to-primary-green bg-clip-text text-transparent">Team</span>
+              Meet Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Team</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               The brilliant minds behind our success
@@ -303,7 +303,7 @@ const About = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Certifications & <span className="bg-gradient-to-r from-primary-orange to-primary-teal bg-clip-text text-transparent">Awards</span>
+              Certifications & <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Awards</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Recognition of our commitment to excellence

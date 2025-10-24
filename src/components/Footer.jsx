@@ -12,10 +12,11 @@ const Footer = () => {
   ];
 
   const services = [
-    'Web Development',
-    'Mobile App Development',
-    'Cloud Solutions',
-    'IT Consulting',
+    'ABAP Development',
+    'Functional advice',
+    'Architecture & Solution',
+    'Project management',
+    'Migration & Modernization',
   ];
 
   const socialLinks = [

@@ -10,172 +10,172 @@ const Services = () => {
   const allServices = [
     {
       icon: FaCode,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies for optimal performance and user experience.',
+      title: 'ABAP Development',
+      description: 'Extensions, interfaces, reports, enhancements and code optimization for ECC & S/4HANA.',
       color: 'from-primary-orange to-red-500',
       features: [
-        'Custom web applications',
-        'E-commerce solutions',
-        'Progressive Web Apps (PWA)',
-        'Responsive design',
-        'CMS development'
+        'Custom SAP module development',
+    'Report and interface creation',
+    'Data Dictionary and ALV reports',
+    'Enhancements & user exits',
+    'Performance tuning & debugging'
       ],
-      technologies: ['React', 'Next.js', 'Vue.js', 'Node.js', 'PHP']
+      technologies: ['SAP ABAP', 'SAP HANA', 'BAPIs', 'IDocs', 'OData Services']
     },
     {
       icon: FaMobile,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile solutions for iOS and Android with seamless performance.',
+      title: 'Functional advice',
+      description: 'FI, CO, MM, SD, PP expertise: process design, configuration and user training.',
       color: 'from-primary-teal to-blue-500',
       features: [
-        'iOS app development',
-        'Android app development',
-        'Cross-platform apps',
-        'App modernization',
-        'App maintenance & support'
+        'Business process analysis & mapping',
+    'SAP module configuration (FI, CO, MM, SD, HR, etc.)',
+    'Requirement gathering & documentation',
+    'User training & support',
+    'Process optimization & best practice implementation'
       ],
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Ionic']
+      technologies: ['SAP S/4HANA', 'SAP ECC', 'SAP Fiori', 'SAP Solution Manager', 'Business Process Management']
     },
     {
       icon: FaCloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for enhanced flexibility and cost efficiency.',
+      title: 'Architecture & Solution',
+      description: 'Design of SAP architectures (on-prem / cloud / hybrid), integration and security.',
       color: 'from-primary-green to-teal-500',
       features: [
-        'Cloud migration',
-        'Cloud architecture',
-        'DevOps services',
-        'Container orchestration',
-        'Cloud security'
+        'End-to-end solution architecture',
+    'System landscape design & optimization',
+    'Integration strategy & middleware planning',
+    'Cloud & hybrid deployment models',
+    'Governance, risk & compliance alignment'
       ],
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes']
+      technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP CPI', 'Azure', 'AWS', 'Enterprise Architecture Tools']
     },
     {
       icon: FaDatabase,
-      title: 'Data Analytics & BI',
-      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+      title: 'Project management',
+      description: 'Steering, planning, quality, budgets and change management for your implementations.',
       color: 'from-purple-500 to-pink-500',
       features: [
-        'Data warehousing',
-        'Business intelligence',
-        'Predictive analytics',
-        'Data visualization',
-        'Big data solutions'
+        'End-to-end project planning & execution',
+    'Agile & waterfall methodologies',
+    'Resource and risk management',
+    'Budgeting & timeline tracking',
+    'Stakeholder communication & reporting'
       ],
-      technologies: ['Power BI', 'Tableau', 'Apache Spark', 'Hadoop', 'MongoDB']
+      technologies: ['SAP Activate', 'JIRA', 'Microsoft Project', 'Confluence', 'Asana', 'Smartsheet']
     },
     {
       icon: FaShieldAlt,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets from evolving threats.',
+      title: 'Migration & Modernization',
+      description: 'S/4HANA migration strategies, data preparation and technical migration execution.',
       color: 'from-primary-red to-orange-500',
       features: [
-        'Security audits',
-        'Penetration testing',
-        'Compliance management',
-        'Security monitoring',
-        'Incident response'
+        'SAP S/4HANA migration & conversion',
+    'System upgrades & data transformation',
+    'Cloud adoption & re-platforming',
+    'Custom code remediation & optimization',
+    'Post-migration validation & support'
       ],
-      technologies: ['SIEM', 'Firewall', 'VPN', 'Encryption', 'IAM']
+      technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP Migration Cockpit', 'Azure', 'AWS', 'Google Cloud']
     },
-    {
-      icon: FaChartLine,
-      title: 'IT Consulting',
-      description: 'Strategic technology consulting to align IT initiatives with your business objectives.',
-      color: 'from-indigo-500 to-primary-teal',
-      features: [
-        'Digital transformation',
-        'Technology strategy',
-        'Process optimization',
-        'IT roadmap planning',
-        'Change management'
-      ],
-      technologies: ['Agile', 'ITIL', 'Six Sigma', 'SAFe', 'Lean']
-    },
-    {
-      icon: FaRobot,
-      title: 'AI & Machine Learning',
-      description: 'Harness the power of artificial intelligence to automate processes and gain competitive advantage.',
-      color: 'from-pink-500 to-purple-500',
-      features: [
-        'Machine learning models',
-        'Natural language processing',
-        'Computer vision',
-        'Chatbots & virtual assistants',
-        'Predictive analytics'
-      ],
-      technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Scikit-learn', 'Python']
-    },
-    {
-      icon: FaNetworkWired,
-      title: 'Network Infrastructure',
-      description: 'Design, implementation, and management of robust network infrastructure solutions.',
-      color: 'from-blue-500 to-cyan-500',
-      features: [
-        'Network design',
-        'Infrastructure setup',
-        'Network security',
-        'Performance monitoring',
-        'Network optimization'
-      ],
-      technologies: ['Cisco', 'Juniper', 'SD-WAN', 'VPN', 'Load Balancers']
-    },
-    {
-      icon: FaLaptopCode,
-      title: 'Software Development',
-      description: 'Custom software solutions tailored to your unique business requirements and workflows.',
-      color: 'from-green-500 to-emerald-500',
-      features: [
-        'Enterprise software',
-        'Custom applications',
-        'API development',
-        'Software integration',
-        'Legacy modernization'
-      ],
-      technologies: ['Java', '.NET', 'Python', 'Go', 'Microservices']
-    },
-    {
-      icon: FaServer,
-      title: 'Managed IT Services',
-      description: '24/7 IT support and management to keep your systems running smoothly and securely.',
-      color: 'from-orange-500 to-red-500',
-      features: [
-        '24/7 monitoring',
-        'Help desk support',
-        'System maintenance',
-        'Backup & recovery',
-        'Performance optimization'
-      ],
-      technologies: ['ITSM', 'Remote monitoring', 'Automation', 'Backup solutions']
-    },
-    {
-      icon: FaGlobe,
-      title: 'Digital Marketing',
-      description: 'Comprehensive digital marketing strategies to grow your online presence and reach.',
-      color: 'from-teal-500 to-blue-500',
-      features: [
-        'SEO optimization',
-        'Social media marketing',
-        'Content marketing',
-        'PPC campaigns',
-        'Email marketing'
-      ],
-      technologies: ['Google Analytics', 'SEMrush', 'HubSpot', 'Mailchimp', 'Google Ads']
-    },
-    {
-      icon: FaCog,
-      title: 'Process Automation',
-      description: 'Streamline operations and reduce costs with intelligent process automation solutions.',
-      color: 'from-primary-orange to-yellow-500',
-      features: [
-        'Robotic process automation',
-        'Workflow automation',
-        'Business process management',
-        'Integration services',
-        'Custom automation tools'
-      ],
-      technologies: ['UiPath', 'Automation Anywhere', 'Zapier', 'Power Automate']
-    },
+    // {
+    //   icon: FaChartLine,
+    //   title: 'IT Consulting',
+    //   description: 'Strategic technology consulting to align IT initiatives with your business objectives.',
+    //   color: 'from-indigo-500 to-primary-teal',
+    //   features: [
+    //     'Digital transformation',
+    //     'Technology strategy',
+    //     'Process optimization',
+    //     'IT roadmap planning',
+    //     'Change management'
+    //   ],
+    //   technologies: ['Agile', 'ITIL', 'Six Sigma', 'SAFe', 'Lean']
+    // },
+    // {
+    //   icon: FaRobot,
+    //   title: 'AI & Machine Learning',
+    //   description: 'Harness the power of artificial intelligence to automate processes and gain competitive advantage.',
+    //   color: 'from-pink-500 to-purple-500',
+    //   features: [
+    //     'Machine learning models',
+    //     'Natural language processing',
+    //     'Computer vision',
+    //     'Chatbots & virtual assistants',
+    //     'Predictive analytics'
+    //   ],
+    //   technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Scikit-learn', 'Python']
+    // },
+    // {
+    //   icon: FaNetworkWired,
+    //   title: 'Network Infrastructure',
+    //   description: 'Design, implementation, and management of robust network infrastructure solutions.',
+    //   color: 'from-blue-500 to-cyan-500',
+    //   features: [
+    //     'Network design',
+    //     'Infrastructure setup',
+    //     'Network security',
+    //     'Performance monitoring',
+    //     'Network optimization'
+    //   ],
+    //   technologies: ['Cisco', 'Juniper', 'SD-WAN', 'VPN', 'Load Balancers']
+    // },
+    // {
+    //   icon: FaLaptopCode,
+    //   title: 'Software Development',
+    //   description: 'Custom software solutions tailored to your unique business requirements and workflows.',
+    //   color: 'from-green-500 to-emerald-500',
+    //   features: [
+    //     'Enterprise software',
+    //     'Custom applications',
+    //     'API development',
+    //     'Software integration',
+    //     'Legacy modernization'
+    //   ],
+    //   technologies: ['Java', '.NET', 'Python', 'Go', 'Microservices']
+    // },
+    // {
+    //   icon: FaServer,
+    //   title: 'Managed IT Services',
+    //   description: '24/7 IT support and management to keep your systems running smoothly and securely.',
+    //   color: 'from-orange-500 to-red-500',
+    //   features: [
+    //     '24/7 monitoring',
+    //     'Help desk support',
+    //     'System maintenance',
+    //     'Backup & recovery',
+    //     'Performance optimization'
+    //   ],
+    //   technologies: ['ITSM', 'Remote monitoring', 'Automation', 'Backup solutions']
+    // },
+    // {
+    //   icon: FaGlobe,
+    //   title: 'Digital Marketing',
+    //   description: 'Comprehensive digital marketing strategies to grow your online presence and reach.',
+    //   color: 'from-teal-500 to-blue-500',
+    //   features: [
+    //     'SEO optimization',
+    //     'Social media marketing',
+    //     'Content marketing',
+    //     'PPC campaigns',
+    //     'Email marketing'
+    //   ],
+    //   technologies: ['Google Analytics', 'SEMrush', 'HubSpot', 'Mailchimp', 'Google Ads']
+    // },
+    // {
+    //   icon: FaCog,
+    //   title: 'Process Automation',
+    //   description: 'Streamline operations and reduce costs with intelligent process automation solutions.',
+    //   color: 'from-primary-orange to-yellow-500',
+    //   features: [
+    //     'Robotic process automation',
+    //     'Workflow automation',
+    //     'Business process management',
+    //     'Integration services',
+    //     'Custom automation tools'
+    //   ],
+    //   technologies: ['UiPath', 'Automation Anywhere', 'Zapier', 'Power Automate']
+    // },
   ];
 
   const process = [

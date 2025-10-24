@@ -9,39 +9,33 @@ const Home = () => {
   const services = [
     {
       icon: FaCode,
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies for optimal performance.',
+      title: 'ABAP Development',
+      description: 'Extensions, interfaces, reports, enhancements and code optimization for ECC & S/4HANA.',
       color: 'from-primary-orange to-red-500'
     },
     {
       icon: FaMobile,
-      title: 'Mobile App Development',
-      description: 'Native and cross-platform mobile solutions for iOS and Android.',
+      title: 'Functional advice',
+      description: 'FI, CO, MM, SD, PP expertise: process design, configuration and user training.',
       color: 'from-primary-teal to-blue-500'
     },
     {
       icon: FaCloud,
-      title: 'Cloud Solutions',
-      description: 'Scalable cloud infrastructure and migration services for your business.',
+      title: 'Architecture & Solution',
+      description: 'Design of SAP architectures (on-prem / cloud / hybrid), integration and security.',
       color: 'from-primary-green to-teal-500'
     },
     {
       icon: FaDatabase,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics.',
+      title: 'Project management',
+      description: 'Steering, planning, quality, budgets and change management for your implementations.',
       color: 'from-purple-500 to-pink-500'
     },
     {
       icon: FaShieldAlt,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets.',
+      title: 'Migration & Modernization',
+      description: 'S/4HANA migration strategies, data preparation and technical migration execution.',
       color: 'from-primary-red to-orange-500'
-    },
-    {
-      icon: FaChartLine,
-      title: 'IT Consulting',
-      description: 'Strategic technology consulting to drive business growth.',
-      color: 'from-indigo-500 to-primary-teal'
     },
   ];
 

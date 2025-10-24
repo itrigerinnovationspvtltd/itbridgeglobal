@@ -75,6 +75,13 @@ const Navbar = () => {
                 Get Started →
               </Link>
             </motion.div>
+              {/* Language Selector */}
+            <select className="ml-4 px-3 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+            >
+              <option value="en">English</option>
+              <option value="fr">French</option>
+            </select>
+            
           </div>
 
           {/* Mobile Menu Button */}
