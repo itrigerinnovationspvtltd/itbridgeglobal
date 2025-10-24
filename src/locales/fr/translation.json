@@ -201,6 +201,35 @@
     "getStarted": "Commencer",
     "keyFeatures": "Fonctionnalités Clés :",
     "technologies": "Technologies :",
+    "whyChoose": {
+      "title": "Pourquoi Choisir Nos Services ?",
+      "benefits": [
+        {
+          "title": "Équipe d'Experts",
+          "description": "Professionnels certifiés avec des années d'expérience dans l'industrie"
+        },
+        {
+          "title": "Technologie de Pointe",
+          "description": "Nous utilisons les derniers outils et technologies pour des résultats optimaux"
+        },
+        {
+          "title": "Antécédents Prouvés",
+          "description": "500+ projets réussis livrés à temps et dans le budget"
+        },
+        {
+          "title": "Support Dédié",
+          "description": "Support et maintenance 24/7 pour maintenir vos systèmes en fonctionnement"
+        },
+        {
+          "title": "Solutions Évolutives",
+          "description": "Solutions qui évoluent avec les besoins de votre entreprise"
+        },
+        {
+          "title": "Rentable",
+          "description": "Valeur maximale pour votre investissement avec une tarification transparente"
+        }
+      ]
+    },
     "serviceCards": {
       "abap": {
         "title": "Développement ABAP",
@@ -246,9 +275,31 @@
           "Communication et reporting des parties prenantes"
         ]
       },
+      "fico": {
+        "title": "Conseil FI/CO",
+        "description": "Gouvernance des Finances et du Contrôle, meilleures pratiques et conseils d'intégration pour les solutions SAP.",
+        "features": [
+          "Rapports financiers et conformité",
+          "Gestion des centres de coûts et de profits",
+          "Grand livre et plan comptable",
+          "Comptabilité des actifs et amortissement",
+          "Intégration avec d'autres modules SAP"
+        ]
+      },
+      "mmsdpp": {
+        "title": "Conseil MM/SD/PP",
+        "description": "Collaboration d'experts sur la Gestion des Matériaux, les Ventes & Distribution, et la Planification de Production pour des opérations SAP rationalisées.",
+        "features": [
+          "Optimisation de la Gestion des Matériaux",
+          "Processus Ventes & Distribution",
+          "Planification de Production et planification",
+          "Gestion et valorisation des stocks",
+          "Intégration de la chaîne d'approvisionnement"
+        ]
+      },
       "migration": {
-        "title": "Migration & Modernisation",
-        "description": "Stratégies de migration S/4HANA, préparation des données et exécution technique de la migration.",
+        "title": "Migration S/4HANA",
+        "description": "Planification et exécution d'une migration transparente vers S/4HANA, incluant la transition des données, la conversion système et l'optimisation des processus.",
         "features": [
           "Migration et conversion SAP S/4HANA",
           "Mises à niveau système et transformation des données",
@@ -396,8 +447,8 @@
     "services": "Nos Services",
     "contact": "Nous Contacter",
     "address": "123 Tech Street, Silicon Valley, CA 94025",
-    "phone": "+1 (123) 456-7890",
-    "email": "info@itbridgeglobal.com",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@itbridgeglobal.com",
     "copyright": "© {{year}} IT Bridge Global. Tous droits réservés.",
     "privacy": "Politique de Confidentialité",
     "terms": "Conditions d'Utilisation"

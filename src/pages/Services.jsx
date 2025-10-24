@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { 
   FaCode, FaMobile, FaCloud, FaDatabase, FaShieldAlt, FaChartLine,
   FaCog, FaRobot, FaNetworkWired, FaLaptopCode, FaServer, FaGlobe,
-  FaCheck, FaArrowRight
+  FaCheck, FaArrowRight, FaBoxes, FaTasks, FaRocket
 } from 'react-icons/fa';
 
 const Services = () => {
@@ -33,34 +33,42 @@ const Services = () => {
       technologies: ['SAP ABAP', 'SAP HANA', 'BAPIs', 'IDocs', 'OData Services']
     },
     {
-      icon: FaMobile,
-      title: t('services.serviceCards.functional.title'),
-      description: t('services.serviceCards.functional.description'),
+      icon: FaChartLine,
+      title: t('services.serviceCards.fico.title'),
+      description: t('services.serviceCards.fico.description'),
       color: 'from-primary-teal to-blue-500',
-      features: t('services.serviceCards.functional.features', { returnObjects: true }),
-      technologies: ['SAP S/4HANA', 'SAP ECC', 'SAP Fiori', 'SAP Solution Manager', 'Business Process Management']
+      features: t('services.serviceCards.fico.features', { returnObjects: true }),
+      technologies: ['SAP FI', 'SAP CO', 'SAP S/4HANA', 'SAP Fiori', 'SAP Analytics']
     },
     {
-      icon: FaCloud,
+      icon: FaBoxes,
+      title: t('services.serviceCards.mmsdpp.title'),
+      description: t('services.serviceCards.mmsdpp.description'),
+      color: 'from-primary-green to-teal-500',
+      features: t('services.serviceCards.mmsdpp.features', { returnObjects: true }),
+      technologies: ['SAP MM', 'SAP SD', 'SAP PP', 'SAP S/4HANA', 'SAP Fiori']
+    },
+    {
+      icon: FaNetworkWired,
       title: t('services.serviceCards.architecture.title'),
       description: t('services.serviceCards.architecture.description'),
-      color: 'from-primary-green to-teal-500',
+      color: 'from-purple-500 to-pink-500',
       features: t('services.serviceCards.architecture.features', { returnObjects: true }),
       technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP CPI', 'Azure', 'AWS', 'Enterprise Architecture Tools']
     },
     {
-      icon: FaDatabase,
+      icon: FaTasks,
       title: t('services.serviceCards.project.title'),
       description: t('services.serviceCards.project.description'),
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-primary-red to-orange-500',
       features: t('services.serviceCards.project.features', { returnObjects: true }),
       technologies: ['SAP Activate', 'JIRA', 'Microsoft Project', 'Confluence', 'Asana', 'Smartsheet']
     },
     {
-      icon: FaShieldAlt,
+      icon: FaRocket,
       title: t('services.serviceCards.migration.title'),
       description: t('services.serviceCards.migration.description'),
-      color: 'from-primary-red to-orange-500',
+      color: 'from-indigo-500 to-primary-teal',
       features: t('services.serviceCards.migration.features', { returnObjects: true }),
       technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP Migration Cockpit', 'Azure', 'AWS', 'Google Cloud']
     },
@@ -381,40 +389,10 @@ const Services = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why Choose Our <span className="text-primary">Services?</span>
+                {t('services.whyChoose.title')}
               </h2>
               <div className="space-y-6">
-                {[
-                  {
-                    title: "Expert Team",
-                    description:
-                      "Certified professionals with years of industry experience",
-                  },
-                  {
-                    title: "Cutting-Edge Technology",
-                    description:
-                      "We use the latest tools and technologies for optimal results",
-                  },
-                  {
-                    title: "Proven Track Record",
-                    description:
-                      "500+ successful projects delivered on time and on budget",
-                  },
-                  {
-                    title: "Dedicated Support",
-                    description:
-                      "24/7 support and maintenance to keep your systems running",
-                  },
-                  {
-                    title: "Scalable Solutions",
-                    description: "Solutions that grow with your business needs",
-                  },
-                  {
-                    title: "Cost-Effective",
-                    description:
-                      "Maximum value for your investment with transparent pricing",
-                  },
-                ].map((benefit, index) => (
+                {t('services.whyChoose.benefits', { returnObjects: true }).map((benefit, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}

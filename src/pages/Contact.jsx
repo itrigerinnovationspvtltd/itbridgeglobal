@@ -58,13 +58,13 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: t('contact.contactInfo.phone'),
-      details: ['+1 (123) 456-7890', '+1 (123) 456-7891'],
+      details: ['+33 1 23 45 67 89'],
       color: 'from-primary-orange to-red-500'
     },
     {
       icon: FaEnvelope,
       title: t('contact.contactInfo.email'),
-      details: ['info@itbridgeglobal.com', 'support@itbridgeglobal.com'],
+      details: ['contact@itbridgeglobal.com'],
       color: 'from-primary-teal to-blue-500'
     },
     {

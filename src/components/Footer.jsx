@@ -14,11 +14,12 @@ const Footer = () => {
   ];
 
   const services = [
-    t('home.services.abap.title'),
-    t('home.services.functional.title'),
-    t('home.services.architecture.title'),
-    t('home.services.project.title'),
-    t('home.services.migration.title'),
+    t('services.serviceCards.abap.title'),
+    t('services.serviceCards.fico.title'),
+    t('services.serviceCards.mmsdpp.title'),
+    t('services.serviceCards.architecture.title'),
+    t('services.serviceCards.project.title'),
+    t('services.serviceCards.migration.title'),
   ];
 
   const socialLinks = [
@@ -109,13 +110,13 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="text-primary flex-shrink-0" />
-                <a href="tel:+11234567890" className="text-gray-400 hover:text-primary transition-colors">
+                <a href="tel:+33123456789" className="text-gray-400 hover:text-primary transition-colors">
                   {t('footer.phone')}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="text-primary flex-shrink-0" />
-                <a href="mailto:info@itbridgeglobal.com" className="text-gray-400 hover:text-primary transition-colors">
+                <a href="mailto:contact@itbridgeglobal.com" className="text-gray-400 hover:text-primary transition-colors">
                   {t('footer.email')}
                 </a>
               </li>

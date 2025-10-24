@@ -201,6 +201,35 @@
     "getStarted": "Get Started",
     "keyFeatures": "Key Features:",
     "technologies": "Technologies:",
+    "whyChoose": {
+      "title": "Why Choose Our Services?",
+      "benefits": [
+        {
+          "title": "Expert Team",
+          "description": "Certified professionals with years of industry experience"
+        },
+        {
+          "title": "Cutting-Edge Technology",
+          "description": "We use the latest tools and technologies for optimal results"
+        },
+        {
+          "title": "Proven Track Record",
+          "description": "500+ successful projects delivered on time and on budget"
+        },
+        {
+          "title": "Dedicated Support",
+          "description": "24/7 support and maintenance to keep your systems running"
+        },
+        {
+          "title": "Scalable Solutions",
+          "description": "Solutions that grow with your business needs"
+        },
+        {
+          "title": "Cost-Effective",
+          "description": "Maximum value for your investment with transparent pricing"
+        }
+      ]
+    },
     "serviceCards": {
       "abap": {
         "title": "ABAP Development",
@@ -246,9 +275,31 @@
           "Stakeholder communication & reporting"
         ]
       },
+      "fico": {
+        "title": "FI/CO Council",
+        "description": "Financials and Controlling governance, best practices, and integration guidance for SAP solutions.",
+        "features": [
+          "Financial reporting & compliance",
+          "Cost center & profit center management",
+          "General ledger & chart of accounts",
+          "Asset accounting & depreciation",
+          "Integration with other SAP modules"
+        ]
+      },
+      "mmsdpp": {
+        "title": "MM/SD/PP Council",
+        "description": "Expert collaboration on Materials Management, Sales & Distribution, and Production Planning for streamlined SAP operations.",
+        "features": [
+          "Materials Management optimization",
+          "Sales & Distribution processes",
+          "Production Planning & scheduling",
+          "Inventory management & valuation",
+          "Supply chain integration"
+        ]
+      },
       "migration": {
-        "title": "Migration & Modernization",
-        "description": "S/4HANA migration strategies, data preparation and technical migration execution.",
+        "title": "S/4HANA Migration",
+        "description": "Planning and executing seamless migration to S/4HANA, including data transition, system conversion, and process optimization.",
         "features": [
           "SAP S/4HANA migration & conversion",
           "System upgrades & data transformation",
@@ -396,8 +447,8 @@
     "services": "Our Services",
     "contact": "Contact Us",
     "address": "123 Tech Street, Silicon Valley, CA 94025",
-    "phone": "+1 (123) 456-7890",
-    "email": "info@itbridgeglobal.com",
+    "phone": "+33 1 23 45 67 89",
+    "email": "contact@itbridgeglobal.com",
     "copyright": "© {{year}} IT Bridge Global. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service"
