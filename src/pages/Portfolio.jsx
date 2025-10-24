@@ -13,11 +13,6 @@ const Portfolio = () => {
     const handleLanguageChange = (lng) => {
       setLanguage(lng);
     };
-
-    i18n.on('languageChanged', handleLanguageChange);
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
   }, [i18n]);
 
   const categories = useMemo(() => [

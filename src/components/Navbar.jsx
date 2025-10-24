@@ -10,16 +10,16 @@ const Navbar = () => {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
 
-  useEffect(() => {
-    const handleLanguageChange = (lng) => {
-      setLanguage(lng);
-    };
+  // useEffect(() => {
+  //   const handleLanguageChange = (lng) => {
+  //     setLanguage(lng);
+  //   };
 
-    i18n.on('languageChanged', handleLanguageChange);
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
-  }, [i18n]);
+  //   i18n.on('languageChanged', handleLanguageChange);
+  //   return () => {
+  //     i18n.off('languageChanged', handleLanguageChange);
+  //   };
+  // }, [i18n]);
 
   const navLinks = [
     { name: t('navbar.home'), path: '/' },

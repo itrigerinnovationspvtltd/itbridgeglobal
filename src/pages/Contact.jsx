@@ -24,10 +24,6 @@ const Contact = () => {
       setLanguage(lng);
     };
 
-    i18n.on('languageChanged', handleLanguageChange);
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
   }, [i18n]);
 
   const handleChange = (e) => {

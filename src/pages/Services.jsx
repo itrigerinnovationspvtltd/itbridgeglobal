@@ -10,18 +10,13 @@ import {
 
 const Services = () => {
   const { t, i18n } = useTranslation();
-  const [language, setLanguage] = useState(i18n.language);
 
-  useEffect(() => {
-    const handleLanguageChange = (lng) => {
-      setLanguage(lng);
-    };
-
-   
-  }, [i18n]);
+  // Remove the language state - it's not needed
+  // Remove the useEffect that listens to language changes
   
   const allServices = useMemo(() => [
     {
+      id: 'abap', // Add stable ID
       icon: FaCode,
       title: t('services.serviceCards.abap.title'),
       description: t('services.serviceCards.abap.description'),
@@ -30,6 +25,7 @@ const Services = () => {
       technologies: ['SAP ABAP', 'SAP HANA', 'BAPIs', 'IDocs', 'OData Services']
     },
     {
+      id: 'fico',
       icon: FaChartLine,
       title: t('services.serviceCards.fico.title'),
       description: t('services.serviceCards.fico.description'),
@@ -38,6 +34,7 @@ const Services = () => {
       technologies: ['SAP FI', 'SAP CO', 'SAP S/4HANA', 'SAP Fiori', 'SAP Analytics']
     },
     {
+      id: 'mmsdpp',
       icon: FaBoxes,
       title: t('services.serviceCards.mmsdpp.title'),
       description: t('services.serviceCards.mmsdpp.description'),
@@ -46,6 +43,7 @@ const Services = () => {
       technologies: ['SAP MM', 'SAP SD', 'SAP PP', 'SAP S/4HANA', 'SAP Fiori']
     },
     {
+      id: 'architecture',
       icon: FaNetworkWired,
       title: t('services.serviceCards.architecture.title'),
       description: t('services.serviceCards.architecture.description'),
@@ -54,6 +52,7 @@ const Services = () => {
       technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP CPI', 'Azure', 'AWS', 'Enterprise Architecture Tools']
     },
     {
+      id: 'project',
       icon: FaTasks,
       title: t('services.serviceCards.project.title'),
       description: t('services.serviceCards.project.description'),
@@ -62,6 +61,7 @@ const Services = () => {
       technologies: ['SAP Activate', 'JIRA', 'Microsoft Project', 'Confluence', 'Asana', 'Smartsheet']
     },
     {
+      id: 'migration',
       icon: FaRocket,
       title: t('services.serviceCards.migration.title'),
       description: t('services.serviceCards.migration.description'),
@@ -69,7 +69,7 @@ const Services = () => {
       features: t('services.serviceCards.migration.features', { returnObjects: true }),
       technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP Migration Cockpit', 'Azure', 'AWS', 'Google Cloud']
     },
-  ], [t, i18n.language]);
+  ], [t]); // Only depend on 't', not i18n.language
 
   const process = [
     {
@@ -137,10 +137,10 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6" key={i18n.language}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
               {t('services.title')}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto" key={i18n.language}>
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
               {t('services.subtitle')}
             </p>
           </motion.div>
@@ -172,9 +172,9 @@ const Services = () => {
             viewport={{ once: true }}
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
-            {allServices.map((service, index) => (
+            {allServices.map((service) => (
               <motion.div
-                key={`${index}-${i18n.language}`}
+                key={service.id} // Use stable ID instead of index + language
                 variants={itemVariants}
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
@@ -258,7 +258,7 @@ const Services = () => {
           >
             {process.map((item, index) => (
               <motion.div
-                key={`${index}-${i18n.language}`}
+                key={index} // Index is fine here since process doesn't change
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -296,7 +296,7 @@ const Services = () => {
               <div className="space-y-6">
                 {t('services.whyChoose.benefits', { returnObjects: true }).map((benefit, index) => (
                   <motion.div
-                    key={`${index}-${i18n.language}`}
+                    key={index}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
