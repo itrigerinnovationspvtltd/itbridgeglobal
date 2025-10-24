@@ -1,25 +1,27 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FaExternalLinkAlt, FaCode, FaMobile, FaCloud, FaShoppingCart } from 'react-icons/fa';
 
 const Portfolio = () => {
+  const { t } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const categories = [
-    { id: 'all', name: 'All Projects' },
-    { id: 'web', name: 'Web Development' },
-    { id: 'mobile', name: 'Mobile Apps' },
-    { id: 'cloud', name: 'Cloud Solutions' },
-    { id: 'ecommerce', name: 'E-commerce' },
-  ];
+  const categories = useMemo(() => [
+    { id: 'all', name: t('portfolio.categories.all') },
+    { id: 'web', name: t('portfolio.categories.web') },
+    { id: 'mobile', name: t('portfolio.categories.mobile') },
+    { id: 'cloud', name: t('portfolio.categories.cloud') },
+    { id: 'ecommerce', name: t('portfolio.categories.ecommerce') },
+  ], [t]);
 
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: t('portfolio.projects.ecommerce.title'),
       category: 'ecommerce',
-      description: 'A comprehensive e-commerce solution with advanced features including real-time inventory management, multi-vendor support, and AI-powered recommendations.',
+      description: t('portfolio.projects.ecommerce.description'),
       image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&h=600&fit=crop',
       icon: FaShoppingCart,
       technologies: ['React', 'Node.js', 'MongoDB', 'AWS'],
@@ -33,9 +35,9 @@ const Portfolio = () => {
     },
     {
       id: 2,
-      title: 'Mobile Banking App',
+      title: t('portfolio.projects.mobileBanking.title'),
       category: 'mobile',
-      description: 'Secure and intuitive mobile banking application with biometric authentication, real-time transactions, and comprehensive financial management tools.',
+      description: t('portfolio.projects.mobileBanking.description'),
       image: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop',
       icon: FaMobile,
       technologies: ['React Native', 'Firebase', 'Node.js', 'PostgreSQL'],
@@ -49,9 +51,9 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'Healthcare Management System',
+      title: t('portfolio.projects.healthcare.title'),
       category: 'web',
-      description: 'End-to-end healthcare management platform connecting patients, doctors, and hospitals with telemedicine capabilities and electronic health records.',
+      description: t('portfolio.projects.healthcare.description'),
       image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=600&fit=crop',
       icon: FaCode,
       technologies: ['Next.js', 'Python', 'MySQL', 'Docker'],
@@ -65,9 +67,9 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      title: 'Cloud Migration Project',
+      title: t('portfolio.projects.cloudMigration.title'),
       category: 'cloud',
-      description: 'Successfully migrated enterprise infrastructure to AWS cloud, improving scalability, reducing costs, and enhancing disaster recovery capabilities.',
+      description: t('portfolio.projects.cloudMigration.description'),
       image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=600&fit=crop',
       icon: FaCloud,
       technologies: ['AWS', 'Terraform', 'Kubernetes', 'Docker'],
@@ -81,9 +83,9 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      title: 'Real Estate Portal',
+      title: t('portfolio.projects.realEstate.title'),
       category: 'web',
-      description: 'Comprehensive real estate platform with virtual tours, AI-powered property matching, and integrated mortgage calculator.',
+      description: t('portfolio.projects.realEstate.description'),
       image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop',
       icon: FaCode,
       technologies: ['Vue.js', 'Laravel', 'MySQL', 'Google Maps API'],
@@ -97,9 +99,9 @@ const Portfolio = () => {
     },
     {
       id: 6,
-      title: 'Fitness Tracking App',
+      title: t('portfolio.projects.fitness.title'),
       category: 'mobile',
-      description: 'AI-powered fitness and wellness app with personalized workout plans, nutrition tracking, and social features for motivation.',
+      description: t('portfolio.projects.fitness.description'),
       image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&h=600&fit=crop',
       icon: FaMobile,
       technologies: ['Flutter', 'Firebase', 'TensorFlow', 'Stripe'],
@@ -148,10 +150,10 @@ const Portfolio = () => {
             className="text-center text-white"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Our Portfolio
+              {t('portfolio.title')}
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Showcasing our successful projects and the impact we've made for our clients
+              {t('portfolio.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -173,7 +175,7 @@ const Portfolio = () => {
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
-                    ? 'bg-gradient-to-r from-primary-teal to-primary-orange text-white shadow-lg scale-105'
+                    ? 'bg-primary text-white shadow-lg scale-105'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
               >
@@ -271,19 +273,19 @@ const Portfolio = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Our <span className="text-primary">Impact</span>
+              {t('portfolio.impact.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Numbers that speak for themselves
+              {t('portfolio.impact.subtitle')}
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: '500+', label: 'Projects Delivered' },
-              { number: '98%', label: 'Client Satisfaction' },
-              { number: '200+', label: 'Happy Clients' },
-              { number: '15+', label: 'Years Experience' },
+              { number: '500+', label: t('portfolio.stats.projectsDelivered') },
+              { number: '98%', label: t('portfolio.stats.clientSatisfaction') },
+              { number: '200+', label: t('portfolio.stats.happyClients') },
+              { number: '15+', label: t('portfolio.stats.yearsExperience') },
             ].map((stat, index) => (
               <motion.div
                 key={index}
@@ -320,10 +322,10 @@ const Portfolio = () => {
               loading="lazy"
             />
             <p className="text-2xl text-gray-700 mb-6 leading-relaxed italic">
-              "IT Bridge Global transformed our digital presence completely. Their expertise, professionalism, and dedication to our success were evident throughout the entire project. The results exceeded our expectations!"
+              "{t('portfolio.testimonial.text')}"
             </p>
-            <h4 className="font-bold text-xl">Sarah Johnson</h4>
-            <p className="text-gray-600">CTO, TechVision Inc.</p>
+            <h4 className="font-bold text-xl">{t('portfolio.testimonial.author')}</h4>
+            <p className="text-gray-600">{t('portfolio.testimonial.position')}</p>
           </motion.div>
         </div>
       </section>
@@ -339,16 +341,16 @@ const Portfolio = () => {
             className="text-center text-white"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Want to Be Our Next Success Story?
+              {t('portfolio.cta.title')}
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's work together to create something amazing
+              {t('portfolio.cta.subtitle')}
             </p>
             <Link
               to="/contact"
               className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105"
             >
-              Start Your Project
+              {t('portfolio.cta.startProject')}
             </Link>
           </motion.div>
         </div>

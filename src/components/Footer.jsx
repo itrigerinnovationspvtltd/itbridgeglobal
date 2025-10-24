@@ -1,23 +1,24 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: t('navbar.home'), path: '/' },
+    { name: t('navbar.about'), path: '/about' },
+    { name: t('navbar.services'), path: '/services' },
+    { name: t('navbar.portfolio'), path: '/portfolio' },
   ];
 
   const services = [
-    'ABAP Development',
-    'FI/CO Council',
-    'MM/SD/PP Council',
-    'SAP Architecture',
-    'Project Management',
-    'S/4HANA Migration',
+    t('home.services.abap.title'),
+    t('home.services.functional.title'),
+    t('home.services.architecture.title'),
+    t('home.services.project.title'),
+    t('home.services.migration.title'),
   ];
 
   const socialLinks = [
@@ -41,11 +42,11 @@ const Footer = () => {
                 className="w-10 h-10 rounded-lg object-cover"
               />
               <span className="text-xl font-bold text-white">
-                Bridge Global
+                {t('footer.company.name')}
               </span>
             </div>
             <p className="text-gray-400 mb-4">
-              Delivering innovative IT solutions to empower businesses worldwide. Your trusted technology partner.
+              {t('footer.company.description')}
             </p>
             <div className="flex space-x-3">
               {socialLinks.map((social, index) => (
@@ -64,7 +65,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
@@ -81,7 +82,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Our Services</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.services')}</h3>
             <ul className="space-y-2">
               {services.map((service, index) => (
                 <li key={index}>
@@ -98,24 +99,24 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4">Contact Us</h3>
+            <h3 className="text-white font-semibold text-lg mb-4">{t('footer.contact')}</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <FaMapMarkerAlt className="text-primary mt-1 flex-shrink-0" />
                 <span className="text-gray-400">
-                  123 Tech Street, Silicon Valley, CA 94025
+                  {t('footer.address')}
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <FaPhone className="text-primary flex-shrink-0" />
                 <a href="tel:+11234567890" className="text-gray-400 hover:text-primary transition-colors">
-                  +33 1 23 45 67 89
+                  {t('footer.phone')}
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="text-primary flex-shrink-0" />
                 <a href="mailto:info@itbridgeglobal.com" className="text-gray-400 hover:text-primary transition-colors">
-                  contact@itbridgeglobal.com
+                  {t('footer.email')}
                 </a>
               </li>
             </ul>
@@ -126,14 +127,14 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm">
-              © {currentYear} IT Bridge Global. All rights reserved.
+              {t('footer.copyright', { year: currentYear })}
             </p>
             <div className="flex space-x-6 text-sm">
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                Privacy Policy
+                {t('footer.privacy')}
               </a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-                Terms of Service
+                {t('footer.terms')}
               </a>
             </div>
           </div>

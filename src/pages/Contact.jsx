@@ -1,11 +1,13 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { 
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock,
   FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram
 } from 'react-icons/fa';
 
 const Contact = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -43,25 +45,25 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: FaPhone,
-      title: 'Phone',
+      title: t('contact.contactInfo.phone'),
       details: ['+1 (123) 456-7890', '+1 (123) 456-7891'],
       color: 'from-primary-orange to-red-500'
     },
     {
       icon: FaEnvelope,
-      title: 'Email',
+      title: t('contact.contactInfo.email'),
       details: ['info@itbridgeglobal.com', 'support@itbridgeglobal.com'],
       color: 'from-primary-teal to-blue-500'
     },
     {
       icon: FaMapMarkerAlt,
-      title: 'Address',
+      title: t('contact.contactInfo.address'),
       details: ['123 Tech Street, Silicon Valley', 'CA 94025, United States'],
       color: 'from-primary-green to-teal-500'
     },
     {
       icon: FaClock,
-      title: 'Working Hours',
+      title: t('contact.contactInfo.workingHours'),
       details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM'],
       color: 'from-purple-500 to-pink-500'
     },
@@ -105,10 +107,10 @@ const Contact = () => {
             className="text-center text-white"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Contact Us
+              {t('contact.title')}
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Let's discuss how we can help transform your business with our IT solutions
+              {t('contact.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -153,10 +155,10 @@ const Contact = () => {
               transition={{ duration: 0.6 }}
             >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Send Us a <span className="text-primary">Message</span>
+              {t('contact.form.title')}
             </h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below and our team will get back to you within 24 hours.
+                {t('contact.form.subtitle')}
               </p>
 
               {submitted && (
@@ -165,7 +167,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg mb-6"
                 >
-                  Thank you for your message! We'll get back to you soon.
+                  {t('contact.form.successMessage')}
                 </motion.div>
               )}
 
@@ -173,7 +175,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Full Name *
+                      {t('contact.form.fullName')} *
                     </label>
                     <input
                       type="text"
@@ -183,12 +185,12 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-teal focus:border-transparent outline-none transition-all"
-                      placeholder="John Doe"
+                      placeholder={t('contact.form.placeholders.name')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email Address *
+                      {t('contact.form.emailAddress')} *
                     </label>
                     <input
                       type="email"
@@ -198,7 +200,7 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-teal focus:border-transparent outline-none transition-all"
-                      placeholder="john@example.com"
+                      placeholder={t('contact.form.placeholders.email')}
                     />
                   </div>
                 </div>
@@ -206,7 +208,7 @@ const Contact = () => {
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Phone Number
+                      {t('contact.form.phoneNumber')}
                     </label>
                     <input
                       type="tel"
@@ -215,12 +217,12 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-teal focus:border-transparent outline-none transition-all"
-                      placeholder="+1 (123) 456-7890"
+                      placeholder={t('contact.form.placeholders.phone')}
                     />
                   </div>
                   <div>
                     <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
-                      Subject *
+                      {t('contact.form.subject')} *
                     </label>
                     <input
                       type="text"
@@ -230,14 +232,14 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-teal focus:border-transparent outline-none transition-all"
-                      placeholder="Project Inquiry"
+                      placeholder={t('contact.form.placeholders.subject')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
-                    Message *
+                    {t('contact.form.message')} *
                   </label>
                   <textarea
                     id="message"
@@ -247,7 +249,7 @@ const Contact = () => {
                     required
                     rows="6"
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-teal focus:border-transparent outline-none transition-all resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder={t('contact.form.placeholders.message')}
                   ></textarea>
                 </div>
 
@@ -257,7 +259,7 @@ const Contact = () => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full btn-primary text-lg"
                 >
-                  Send Message
+                  {t('contact.form.sendMessage')}
                 </motion.button>
               </form>
             </motion.div>
@@ -285,15 +287,9 @@ const Contact = () => {
 
               {/* Why Contact Us */}
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 border border-gray-100">
-                <h3 className="text-2xl font-bold mb-6">Why Contact Us?</h3>
+                <h3 className="text-2xl font-bold mb-6">{t('contact.whyContact.title')}</h3>
                 <ul className="space-y-4">
-                  {[
-                    'Free consultation and project estimation',
-                    'Expert advice from certified professionals',
-                    'Custom solutions tailored to your needs',
-                    'Transparent pricing with no hidden costs',
-                    'Quick response time (within 24 hours)',
-                  ].map((item, index) => (
+                  {t('contact.whyContact.reasons', { returnObjects: true }).map((item, index) => (
                     <motion.li
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
@@ -313,9 +309,9 @@ const Contact = () => {
 
               {/* Social Links */}
               <div className="bg-gradient-to-br from-primary-teal to-primary-orange rounded-2xl p-8 text-white">
-                <h3 className="text-2xl font-bold mb-4">Connect With Us</h3>
+                <h3 className="text-2xl font-bold mb-4">{t('contact.connect.title')}</h3>
                 <p className="mb-6 opacity-90">
-                  Follow us on social media for the latest updates, news, and insights.
+                  {t('contact.connect.subtitle')}
                 </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((social, index) => (
@@ -348,32 +344,15 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Frequently Asked <span className="text-primary">Questions</span>
+              {t('contact.faq.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Find answers to common questions about our services
+              {t('contact.faq.subtitle')}
             </p>
           </motion.div>
 
           <div className="max-w-4xl mx-auto space-y-4">
-            {[
-              {
-                question: 'What services do you offer?',
-                answer: 'We offer a comprehensive range of IT services including web development, mobile app development, cloud solutions, cybersecurity, IT consulting, and more. Check our Services page for a complete list.',
-              },
-              {
-                question: 'How long does a typical project take?',
-                answer: 'Project timelines vary based on complexity and requirements. A simple website might take 4-6 weeks, while a complex enterprise solution could take 3-6 months. We provide detailed timelines during the consultation phase.',
-              },
-              {
-                question: 'Do you provide ongoing support and maintenance?',
-                answer: 'Yes! We offer comprehensive support and maintenance packages to ensure your solutions continue to perform optimally. Our team is available 24/7 for critical issues.',
-              },
-              {
-                question: 'What is your pricing model?',
-                answer: 'We offer flexible pricing models including fixed-price projects, time & materials, and dedicated team arrangements. Contact us for a free consultation and customized quote.',
-              },
-            ].map((faq, index) => (
+            {t('contact.faq.questions', { returnObjects: true }).map((faq, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

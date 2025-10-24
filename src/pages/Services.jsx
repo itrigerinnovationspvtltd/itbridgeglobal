@@ -1,146 +1,55 @@
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import {
-  FaCode,
-  FaMobile,
-  FaCloud,
-  FaDatabase,
-  FaShieldAlt,
-  FaChartLine,
-  FaCog,
-  FaRobot,
-  FaNetworkWired,
-  FaLaptopCode,
-  FaServer,
-  FaGlobe,
-  FaCheck,
-  FaArrowRight,
-  FaBoxes,
-  FaTasks,
-  FaRocket,
-} from "react-icons/fa";
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import { 
+  FaCode, FaMobile, FaCloud, FaDatabase, FaShieldAlt, FaChartLine,
+  FaCog, FaRobot, FaNetworkWired, FaLaptopCode, FaServer, FaGlobe,
+  FaCheck, FaArrowRight
+} from 'react-icons/fa';
 
 const Services = () => {
+  const { t } = useTranslation();
+  
   const allServices = [
     {
       icon: FaCode,
-      title: "ABAP Development",
-      description:
-        "Extensions, interfaces, reports, enhancements and code optimization for ECC & S/4HANA.",
-      color: "from-primary-orange to-red-500",
-      features: [
-        "Custom SAP module development",
-        "Report and interface creation",
-        "Data Dictionary and ALV reports",
-        "Enhancements & user exits",
-        "Performance tuning & debugging",
-      ],
-      technologies: [
-        "SAP ABAP",
-        "SAP HANA",
-        "BAPIs",
-        "IDocs",
-        "OData Services",
-      ],
+      title: t('services.serviceCards.abap.title'),
+      description: t('services.serviceCards.abap.description'),
+      color: 'from-primary-orange to-red-500',
+      features: t('services.serviceCards.abap.features', { returnObjects: true }),
+      technologies: ['SAP ABAP', 'SAP HANA', 'BAPIs', 'IDocs', 'OData Services']
     },
     {
-      icon: FaChartLine,
-      title: "FI/CO Council",
-      description:
-        "Financials and Controlling governance, best practices, and integration guidance for SAP solutions.",
-      color: "from-green-500 to-emerald-600",
-      features: [
-        "Financial process standardization",
-        "Controlling and cost management guidance",
-        "Integration with SAP modules",
-        "Compliance and audit support",
-        "Reporting and analytics recommendations",
-      ],
-      technologies: [
-        "SAP FI",
-        "SAP CO",
-        "SAP S/4HANA",
-        "SAP Fiori",
-        "SAP Analytics Cloud",
-      ],
+      icon: FaMobile,
+      title: t('services.serviceCards.functional.title'),
+      description: t('services.serviceCards.functional.description'),
+      color: 'from-primary-teal to-blue-500',
+      features: t('services.serviceCards.functional.features', { returnObjects: true }),
+      technologies: ['SAP S/4HANA', 'SAP ECC', 'SAP Fiori', 'SAP Solution Manager', 'Business Process Management']
     },
     {
-      icon: FaBoxes,
-      title: "MM/SD/PP Council",
-      description:
-        "Expert collaboration on Materials Management, Sales & Distribution, and Production Planning for streamlined SAP operations.",
-      color: "from-blue-500 to-indigo-600",
-      features: [
-        "Material and inventory management",
-        "Sales order and billing optimization",
-        "Production planning and scheduling",
-        "Cross-module process integration",
-        "Reporting and KPI tracking",
-      ],
-      technologies: ["SAP MM", "SAP SD", "SAP PP", "SAP Fiori", "SAP APO"],
+      icon: FaCloud,
+      title: t('services.serviceCards.architecture.title'),
+      description: t('services.serviceCards.architecture.description'),
+      color: 'from-primary-green to-teal-500',
+      features: t('services.serviceCards.architecture.features', { returnObjects: true }),
+      technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP CPI', 'Azure', 'AWS', 'Enterprise Architecture Tools']
     },
     {
-      icon: FaNetworkWired,
-      title: "SAP Architecture",
-      description:
-        "Designing scalable, secure, and high-performing SAP landscapes ensuring seamless system integration and modernization.",
-      color: "from-purple-500 to-violet-600",
-      features: [
-        "System landscape design",
-        "Integration strategy and middleware",
-        "Performance optimization",
-        "Security and compliance setup",
-        "Cloud and hybrid architecture guidance",
-      ],
-      technologies: [
-        "SAP NetWeaver",
-        "SAP HANA",
-        "SAP Cloud Platform",
-        "SAP Fiori",
-        "SAP PI/PO",
-      ],
+      icon: FaDatabase,
+      title: t('services.serviceCards.project.title'),
+      description: t('services.serviceCards.project.description'),
+      color: 'from-purple-500 to-pink-500',
+      features: t('services.serviceCards.project.features', { returnObjects: true }),
+      technologies: ['SAP Activate', 'JIRA', 'Microsoft Project', 'Confluence', 'Asana', 'Smartsheet']
     },
     {
-      icon: FaTasks,
-      title: "Project Management",
-      description:
-        "Ensuring successful SAP project delivery through planning, execution, risk control, and stakeholder alignment.",
-      color: "from-yellow-500 to-amber-600",
-      features: [
-        "Project planning and scheduling",
-        "Risk and issue management",
-        "Resource allocation and tracking",
-        "Stakeholder communication",
-        "Project governance and reporting",
-      ],
-      technologies: [
-        "SAP Activate",
-        "MS Project",
-        "Jira",
-        "SAP Solution Manager",
-        "Agile/Scrum",
-      ],
-    },
-    {
-      icon: FaRocket,
-      title: "S/4HANA Migration",
-      description:
-        "Planning and executing seamless migration to S/4HANA, including data transition, system conversion, and process optimization.",
-      color: "from-red-500 to-pink-600",
-      features: [
-        "System conversion and landscape planning",
-        "Data migration and validation",
-        "Custom code adaptation",
-        "Process optimization and testing",
-        "Change management and training",
-      ],
-      technologies: [
-        "SAP S/4HANA",
-        "SAP Data Services",
-        "SAP Fiori",
-        "SAP HANA Studio",
-        "SAP Landscape Transformation (SLT)",
-      ],
+      icon: FaShieldAlt,
+      title: t('services.serviceCards.migration.title'),
+      description: t('services.serviceCards.migration.description'),
+      color: 'from-primary-red to-orange-500',
+      features: t('services.serviceCards.migration.features', { returnObjects: true }),
+      technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP Migration Cockpit', 'Azure', 'AWS', 'Google Cloud']
     },
     // {
     //   icon: FaChartLine,
@@ -244,37 +153,34 @@ const Services = () => {
 
   const process = [
     {
-      step: "01",
-      title: "Discovery",
-      description:
-        "We understand your business needs, challenges, and objectives.",
+      step: '01',
+      title: t('services.process.discovery.title'),
+      description: t('services.process.discovery.description'),
     },
     {
-      step: "02",
-      title: "Planning",
-      description:
-        "We create a detailed roadmap and strategy for your project.",
+      step: '02',
+      title: t('services.process.planning.title'),
+      description: t('services.process.planning.description'),
     },
     {
-      step: "03",
-      title: "Development",
-      description: "Our expert team builds your solution using best practices.",
+      step: '03',
+      title: t('services.process.development.title'),
+      description: t('services.process.development.description'),
     },
     {
-      step: "04",
-      title: "Testing",
-      description: "Rigorous quality assurance to ensure flawless performance.",
+      step: '04',
+      title: t('services.process.testing.title'),
+      description: t('services.process.testing.description'),
     },
     {
-      step: "05",
-      title: "Deployment",
-      description: "Smooth launch and implementation of your solution.",
+      step: '05',
+      title: t('services.process.deployment.title'),
+      description: t('services.process.deployment.description'),
     },
     {
-      step: "06",
-      title: "Support",
-      description:
-        "Ongoing maintenance and support for continuous improvement.",
+      step: '06',
+      title: t('services.process.support.title'),
+      description: t('services.process.support.description'),
     },
   ];
 
@@ -309,11 +215,10 @@ const Services = () => {
             className="text-center text-white"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Our Services
+              {t('services.title')}
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to transform your business and
-              drive growth
+              {t('services.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -330,10 +235,10 @@ const Services = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              What We <span className="text-primary">Offer</span>
+              {t('services.whatWeOffer')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              End-to-end IT services to meet all your technology needs
+              {t('services.offerSubtitle')}
             </p>
           </motion.div>
 
@@ -362,9 +267,7 @@ const Services = () => {
                 </p>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">
-                    Key Features:
-                  </h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">{t('services.keyFeatures')}</h4>
                   <ul className="space-y-2">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
@@ -379,9 +282,7 @@ const Services = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">
-                    Technologies:
-                  </h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">{t('services.technologies')}</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, idx) => (
                       <span
@@ -398,7 +299,7 @@ const Services = () => {
                   to="/contact"
                   className="inline-flex items-center text-primary-teal font-semibold hover:gap-3 transition-all duration-300"
                 >
-                  Get Started
+                  {t('services.getStarted')}
                   <FaArrowRight className="ml-2" />
                 </Link>
               </motion.div>

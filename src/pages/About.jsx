@@ -1,34 +1,37 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { 
   FaRocket, FaEye, FaHeart, FaAward, FaCertificate, FaTrophy,
   FaUsers, FaLightbulb, FaHandshake
 } from 'react-icons/fa';
 
 const About = () => {
+  const { t } = useTranslation();
+  
   const values = [
     {
       icon: FaLightbulb,
-      title: 'Innovation',
-      description: 'We constantly explore new technologies and methodologies to deliver cutting-edge solutions.',
+      title: t('about.values.innovation.title'),
+      description: t('about.values.innovation.description'),
       color: 'from-primary-orange to-red-500'
     },
     {
       icon: FaHeart,
-      title: 'Quality',
-      description: 'Excellence is not an act but a habit. We ensure the highest quality in everything we deliver.',
+      title: t('about.values.quality.title'),
+      description: t('about.values.quality.description'),
       color: 'from-primary-teal to-blue-500'
     },
     {
       icon: FaHandshake,
-      title: 'Integrity',
-      description: 'We build trust through transparency, honesty, and ethical business practices.',
+      title: t('about.values.integrity.title'),
+      description: t('about.values.integrity.description'),
       color: 'from-primary-green to-teal-500'
     },
     {
       icon: FaUsers,
-      title: 'Collaboration',
-      description: 'We believe in the power of teamwork and work closely with our clients as partners.',
+      title: t('about.values.collaboration.title'),
+      description: t('about.values.collaboration.description'),
       color: 'from-purple-500 to-pink-500'
     },
   ];
@@ -36,18 +39,18 @@ const About = () => {
   const achievements = [
     {
       icon: FaAward,
-      title: 'ISO 9001:2015 Certified',
-      description: 'Quality management certification',
+      title: t('about.achievements.iso.title'),
+      description: t('about.achievements.iso.description'),
     },
     {
       icon: FaCertificate,
-      title: 'Microsoft Gold Partner',
-      description: 'Premier cloud solutions provider',
+      title: t('about.achievements.microsoft.title'),
+      description: t('about.achievements.microsoft.description'),
     },
     {
       icon: FaTrophy,
-      title: 'Best IT Services 2024',
-      description: 'Industry recognition award',
+      title: t('about.achievements.award.title'),
+      description: t('about.achievements.award.description'),
     },
   ];
 
@@ -109,10 +112,10 @@ const About = () => {
             className="text-center text-white"
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              About Us
+              {t('about.title')}
             </h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
-              Empowering businesses through innovative technology solutions since 2009
+              {t('about.subtitle')}
             </p>
           </motion.div>
         </div>
@@ -129,18 +132,14 @@ const About = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Our <span className="text-primary">Story</span>
+                {t('about.story.title')}
               </h2>
               <div className="space-y-4 text-gray-700 leading-relaxed">
-                <p>
-                  Founded in 2009, IT Bridge Global started with a simple mission: to bridge the gap between complex technology and business success. What began as a small team of passionate developers has grown into a leading IT services company serving clients worldwide.
-                </p>
-                <p>
-                  Over the years, we've evolved with the rapidly changing technology landscape, continuously expanding our expertise and service offerings. Today, we're proud to be a trusted partner for businesses of all sizes, from startups to Fortune 500 companies.
-                </p>
-                <p>
-                  Our success is built on a foundation of technical excellence, customer satisfaction, and a commitment to innovation. We don't just deliver solutions; we build lasting partnerships that drive business growth and digital transformation.
-                </p>
+                {t('about.story.content', { returnObjects: true }).map((paragraph, index) => (
+                  <p key={index}>
+                    {paragraph}
+                  </p>
+                ))}
               </div>
             </motion.div>
 
@@ -334,7 +333,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding bg-gradient-to-br from-primary-orange to-primary-teal">
+      <section className="section-padding bg-primary">
         <div className="container-custom">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -344,16 +343,16 @@ const About = () => {
             className="text-center text-white"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Join Our Journey
+              {t('about.cta.title')}
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Let's create something amazing together
+              {t('about.cta.subtitle')}
             </p>
             <Link
               to="/contact"
-              className="inline-block bg-white text-primary-teal px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105"
+              className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105"
             >
-              Get In Touch
+              {t('about.cta.getInTouch')}
             </Link>
           </motion.div>
         </div>

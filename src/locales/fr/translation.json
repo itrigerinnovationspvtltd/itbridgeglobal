@@ -1,0 +1,405 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "contact": "Contact",
+    "getStarted": "Commencer →",
+    "language": "Langue"
+  },
+  "home": {
+    "badge": "Fournisseur de Solutions IT de Premier Plan",
+    "title": "Transformez Votre",
+    "titleHighlight": "Avenir Numérique",
+    "subtitle": "Nous créons des solutions IT innovantes qui permettent aux entreprises de prospérer à l'ère numérique. Du développement web à l'infrastructure cloud, nous transformons votre vision en réalité.",
+    "getStartedFree": "Commencer Gratuitement",
+    "watchDemo": "Voir la Démo",
+    "stats": {
+      "projects": "Projets Terminés",
+      "clients": "Clients Satisfaits",
+      "team": "Membres d'Équipe",
+      "experience": "Années d'Expérience"
+    },
+    "services": {
+      "title": "Nos Services",
+      "subtitle": "Solutions IT complètes conçues pour accélérer la croissance de votre entreprise",
+      "abap": {
+        "title": "Développement ABAP",
+        "description": "Extensions, interfaces, rapports, améliorations et optimisation du code pour ECC & S/4HANA."
+      },
+      "functional": {
+        "title": "Conseil fonctionnel",
+        "description": "Expertise FI, CO, MM, SD, PP : conception de processus, configuration et formation des utilisateurs."
+      },
+      "architecture": {
+        "title": "Architecture & Solution",
+        "description": "Conception d'architectures SAP (on-prem / cloud / hybride), intégration et sécurité."
+      },
+      "project": {
+        "title": "Gestion de projet",
+        "description": "Pilotage, planification, qualité, budgets et gestion du changement pour vos implémentations."
+      },
+      "migration": {
+        "title": "Migration & Modernisation",
+        "description": "Stratégies de migration S/4HANA, préparation des données et exécution technique de la migration."
+      },
+      "learnMore": "En Savoir Plus"
+    },
+    "about": {
+      "title": "Pourquoi Choisir IT Bridge Global ?",
+      "subtitle": "Avec plus de 15 ans d'expérience dans l'industrie IT, nous avons aidé des centaines d'entreprises à transformer leur présence numérique et à atteindre leurs objectifs.",
+      "features": [
+        "Équipe expérimentée de professionnels certifiés",
+        "Solutions technologiques de pointe",
+        "Antécédents éprouvés de succès",
+        "Support et maintenance dédiés"
+      ],
+      "learnMore": "En Savoir Plus Sur Nous"
+    },
+    "testimonials": {
+      "title": "Ce Que Disent Nos Clients",
+      "subtitle": "Ne nous croyez pas sur parole - écoutez les entreprises que nous avons aidées à réussir"
+    },
+    "cta": {
+      "title": "Prêt à Transformer Votre Entreprise ?",
+      "subtitle": "Discutons de la façon dont nos solutions IT peuvent vous aider à atteindre vos objectifs commerciaux et à stimuler la croissance",
+      "getStarted": "Commencer Aujourd'hui",
+      "viewServices": "Voir Nos Services"
+    }
+  },
+  "about": {
+    "title": "À Propos",
+    "subtitle": "Autonomiser les entreprises grâce à des solutions technologiques innovantes depuis 2009",
+    "story": {
+      "title": "Notre Histoire",
+      "content": [
+        "Fondée en 2009, IT Bridge Global a commencé avec une mission simple : combler le fossé entre la technologie complexe et le succès commercial. Ce qui a commencé comme une petite équipe de développeurs passionnés est devenu une entreprise de services IT leader servant des clients dans le monde entier.",
+        "Au fil des ans, nous avons évolué avec le paysage technologique en rapide évolution, élargissant continuellement notre expertise et nos offres de services. Aujourd'hui, nous sommes fiers d'être un partenaire de confiance pour les entreprises de toutes tailles, des startups aux entreprises Fortune 500.",
+        "Notre succès est construit sur une base d'excellence technique, de satisfaction client et d'engagement envers l'innovation. Nous ne livrons pas seulement des solutions ; nous construisons des partenariats durables qui stimulent la croissance commerciale et la transformation numérique."
+      ]
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "content": "Autonomiser les entreprises avec des solutions IT innovantes, fiables et évolutives qui stimulent la croissance, l'efficacité et l'avantage concurrentiel à l'ère numérique."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "content": "Être le partenaire technologique le plus fiable au monde, reconnu pour l'excellence, l'innovation et l'impact transformateur sur les entreprises mondialement."
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Les principes qui guident tout ce que nous faisons",
+      "innovation": {
+        "title": "Innovation",
+        "description": "Nous explorons constamment de nouvelles technologies et méthodologies pour livrer des solutions de pointe."
+      },
+      "quality": {
+        "title": "Qualité",
+        "description": "L'excellence n'est pas un acte mais une habitude. Nous assurons la plus haute qualité dans tout ce que nous livrons."
+      },
+      "integrity": {
+        "title": "Intégrité",
+        "description": "Nous construisons la confiance grâce à la transparence, l'honnêteté et les pratiques commerciales éthiques."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "description": "Nous croyons au pouvoir du travail d'équipe et travaillons étroitement avec nos clients comme partenaires."
+      }
+    },
+    "team": {
+      "title": "Rencontrez Notre Équipe",
+      "subtitle": "Les esprits brillants derrière notre succès"
+    },
+    "achievements": {
+      "title": "Certifications & Récompenses",
+      "subtitle": "Reconnaissance de notre engagement envers l'excellence",
+      "iso": {
+        "title": "Certifié ISO 9001:2015",
+        "description": "Certification de gestion de la qualité"
+      },
+      "microsoft": {
+        "title": "Partenaire Microsoft Gold",
+        "description": "Fournisseur de solutions cloud de premier plan"
+      },
+      "award": {
+        "title": "Meilleurs Services IT 2024",
+        "description": "Prix de reconnaissance de l'industrie"
+      }
+    },
+    "cta": {
+      "title": "Rejoignez Notre Voyage",
+      "subtitle": "Créons quelque chose d'incroyable ensemble",
+      "getInTouch": "Entrer en Contact"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions IT complètes conçues pour transformer votre entreprise et stimuler la croissance",
+    "whatWeOffer": "Ce Que Nous Offrons",
+    "offerSubtitle": "Services IT de bout en bout pour répondre à tous vos besoins technologiques",
+    "process": {
+      "title": "Notre Processus",
+      "subtitle": "Une méthodologie éprouvée pour assurer le succès du projet",
+      "discovery": {
+        "title": "Découverte",
+        "description": "Nous comprenons vos besoins commerciaux, défis et objectifs."
+      },
+      "planning": {
+        "title": "Planification",
+        "description": "Nous créons une feuille de route détaillée et une stratégie pour votre projet."
+      },
+      "development": {
+        "title": "Développement",
+        "description": "Notre équipe d'experts construit votre solution en utilisant les meilleures pratiques."
+      },
+      "testing": {
+        "title": "Tests",
+        "description": "Assurance qualité rigoureuse pour garantir des performances parfaites."
+      },
+      "deployment": {
+        "title": "Déploiement",
+        "description": "Lancement et implémentation en douceur de votre solution."
+      },
+      "support": {
+        "title": "Support",
+        "description": "Maintenance et support continus pour une amélioration continue."
+      }
+    },
+    "whyChoose": {
+      "title": "Pourquoi Choisir Nos Services ?",
+      "expertTeam": {
+        "title": "Équipe d'Experts",
+        "description": "Professionnels certifiés avec des années d'expérience dans l'industrie"
+      },
+      "cuttingEdge": {
+        "title": "Technologie de Pointe",
+        "description": "Nous utilisons les derniers outils et technologies pour des résultats optimaux"
+      },
+      "provenTrack": {
+        "title": "Antécédents Éprouvés",
+        "description": "500+ projets réussis livrés à temps et dans le budget"
+      },
+      "dedicatedSupport": {
+        "title": "Support Dédié",
+        "description": "Support et maintenance 24/7 pour maintenir vos systèmes en fonctionnement"
+      },
+      "scalableSolutions": {
+        "title": "Solutions Évolutives",
+        "description": "Solutions qui grandissent avec les besoins de votre entreprise"
+      },
+      "costEffective": {
+        "title": "Rentable",
+        "description": "Valeur maximale pour votre investissement avec des prix transparents"
+      }
+    },
+    "cta": {
+      "title": "Prêt à Commencer ?",
+      "subtitle": "Discutons de la façon dont nos services peuvent vous aider à atteindre vos objectifs commerciaux",
+      "contactUs": "Contactez-Nous Aujourd'hui"
+    },
+    "getStarted": "Commencer",
+    "keyFeatures": "Fonctionnalités Clés :",
+    "technologies": "Technologies :",
+    "serviceCards": {
+      "abap": {
+        "title": "Développement ABAP",
+        "description": "Extensions, interfaces, rapports, améliorations et optimisation du code pour ECC & S/4HANA.",
+        "features": [
+          "Développement de modules SAP personnalisés",
+          "Création de rapports et interfaces",
+          "Dictionnaire de données et rapports ALV",
+          "Améliorations et sorties utilisateur",
+          "Optimisation des performances et débogage"
+        ]
+      },
+      "functional": {
+        "title": "Conseil fonctionnel",
+        "description": "Expertise FI, CO, MM, SD, PP : conception de processus, configuration et formation des utilisateurs.",
+        "features": [
+          "Analyse et cartographie des processus métier",
+          "Configuration des modules SAP (FI, CO, MM, SD, HR, etc.)",
+          "Collecte et documentation des exigences",
+          "Formation et support des utilisateurs",
+          "Optimisation des processus et implémentation des meilleures pratiques"
+        ]
+      },
+      "architecture": {
+        "title": "Architecture & Solution",
+        "description": "Conception d'architectures SAP (on-prem / cloud / hybride), intégration et sécurité.",
+        "features": [
+          "Architecture de solution de bout en bout",
+          "Conception et optimisation du paysage système",
+          "Planification de stratégie d'intégration et middleware",
+          "Modèles de déploiement cloud et hybride",
+          "Alignement gouvernance, risque et conformité"
+        ]
+      },
+      "project": {
+        "title": "Gestion de projet",
+        "description": "Pilotage, planification, qualité, budgets et gestion du changement pour vos implémentations.",
+        "features": [
+          "Planification et exécution de projet de bout en bout",
+          "Méthodologies Agile et en cascade",
+          "Gestion des ressources et des risques",
+          "Suivi des budgets et des délais",
+          "Communication et reporting des parties prenantes"
+        ]
+      },
+      "migration": {
+        "title": "Migration & Modernisation",
+        "description": "Stratégies de migration S/4HANA, préparation des données et exécution technique de la migration.",
+        "features": [
+          "Migration et conversion SAP S/4HANA",
+          "Mises à niveau système et transformation des données",
+          "Adoption cloud et re-plateformage",
+          "Remédiation et optimisation du code personnalisé",
+          "Validation et support post-migration"
+        ]
+      }
+    }
+  },
+  "portfolio": {
+    "title": "Notre Portfolio",
+    "subtitle": "Présentation de nos projets réussis et de l'impact que nous avons eu pour nos clients",
+    "categories": {
+      "all": "Tous les Projets",
+      "web": "Développement Web",
+      "mobile": "Applications Mobiles",
+      "cloud": "Solutions Cloud",
+      "ecommerce": "E-commerce"
+    },
+    "impact": {
+      "title": "Notre Impact",
+      "subtitle": "Des chiffres qui parlent d'eux-mêmes",
+      "projectsDelivered": "Projets Livrés",
+      "clientSatisfaction": "Satisfaction Client",
+      "happyClients": "Clients Satisfaits",
+      "yearsExperience": "Années d'Expérience"
+    },
+    "testimonial": {
+      "text": "IT Bridge Global a complètement transformé notre présence numérique. Leur expertise, professionnalisme et dévouement à notre succès étaient évidents tout au long du projet. Les résultats ont dépassé nos attentes !",
+      "author": "Sarah Johnson",
+      "position": "CTO, TechVision Inc."
+    },
+    "cta": {
+      "title": "Voulez-Vous Être Notre Prochaine Histoire de Succès ?",
+      "subtitle": "Travaillons ensemble pour créer quelque chose d'incroyable",
+      "startProject": "Commencer Votre Projet"
+    },
+    "technologiesUsed": "Technologies Utilisées :",
+    "keyResults": "Résultats Clés :",
+    "viewCaseStudy": "Voir l'Étude de Cas",
+    "projects": {
+      "ecommerce": {
+        "title": "Plateforme E-Commerce",
+        "description": "Une solution e-commerce complète avec des fonctionnalités avancées incluant la gestion d'inventaire en temps réel, le support multi-vendeurs, et des recommandations alimentées par l'IA."
+      },
+      "mobileBanking": {
+        "title": "Application Bancaire Mobile",
+        "description": "Application bancaire mobile sécurisée et intuitive avec authentification biométrique, transactions en temps réel, et outils complets de gestion financière."
+      },
+      "healthcare": {
+        "title": "Système de Gestion de Santé",
+        "description": "Plateforme de gestion de santé de bout en bout connectant patients, médecins et hôpitaux avec des capacités de télémédecine et dossiers médicaux électroniques."
+      },
+      "cloudMigration": {
+        "title": "Projet de Migration Cloud",
+        "description": "Migration réussie de l'infrastructure d'entreprise vers le cloud AWS, améliorant la scalabilité, réduisant les coûts et renforçant les capacités de récupération d'urgence."
+      },
+      "realEstate": {
+        "title": "Portail Immobilier",
+        "description": "Plateforme immobilière complète avec visites virtuelles, correspondance de propriétés alimentée par l'IA, et calculateur de prêt hypothécaire intégré."
+      },
+      "fitness": {
+        "title": "Application de Suivi de Fitness",
+        "description": "Application de fitness et bien-être alimentée par l'IA avec plans d'entraînement personnalisés, suivi nutritionnel et fonctionnalités sociales pour la motivation."
+      }
+    },
+    "stats": {
+      "projectsDelivered": "Projets Livrés",
+      "clientSatisfaction": "Satisfaction Client",
+      "happyClients": "Clients Satisfaits",
+      "yearsExperience": "Années d'Expérience"
+    }
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "subtitle": "Discutons de la façon dont nous pouvons vous aider à transformer votre entreprise avec nos solutions IT",
+    "contactInfo": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse",
+      "workingHours": "Heures de Travail"
+    },
+    "form": {
+      "title": "Envoyez-Nous un Message",
+      "subtitle": "Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les 24 heures.",
+      "successMessage": "Merci pour votre message ! Nous vous répondrons bientôt.",
+      "fullName": "Nom Complet",
+      "emailAddress": "Adresse Email",
+      "phoneNumber": "Numéro de Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "sendMessage": "Envoyer le Message",
+      "placeholders": {
+        "name": "Jean Dupont",
+        "email": "jean@exemple.com",
+        "phone": "+1 (123) 456-7890",
+        "subject": "Demande de Projet",
+        "message": "Parlez-nous de votre projet..."
+      }
+    },
+    "whyContact": {
+      "title": "Pourquoi Nous Contacter ?",
+      "reasons": [
+        "Consultation gratuite et estimation de projet",
+        "Conseils d'experts de professionnels certifiés",
+        "Solutions personnalisées adaptées à vos besoins",
+        "Prix transparents sans coûts cachés",
+        "Temps de réponse rapide (dans les 24 heures)"
+      ]
+    },
+    "connect": {
+      "title": "Connectez-Vous Avec Nous",
+      "subtitle": "Suivez-nous sur les réseaux sociaux pour les dernières mises à jour, actualités et insights."
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "Trouvez des réponses aux questions courantes sur nos services",
+      "questions": [
+        {
+          "question": "Quels services offrez-vous ?",
+          "answer": "Nous offrons une gamme complète de services IT incluant le développement web, le développement d'applications mobiles, les solutions cloud, la cybersécurité, le conseil IT, et plus encore. Consultez notre page Services pour une liste complète."
+        },
+        {
+          "question": "Combien de temps prend un projet typique ?",
+          "answer": "Les délais de projet varient selon la complexité et les exigences. Un site web simple pourrait prendre 4-6 semaines, tandis qu'une solution d'entreprise complexe pourrait prendre 3-6 mois. Nous fournissons des délais détaillés pendant la phase de consultation."
+        },
+        {
+          "question": "Offrez-vous un support et une maintenance continus ?",
+          "answer": "Oui ! Nous offrons des packages complets de support et maintenance pour assurer que vos solutions continuent à fonctionner de manière optimale. Notre équipe est disponible 24/7 pour les problèmes critiques."
+        },
+        {
+          "question": "Quel est votre modèle de tarification ?",
+          "answer": "Nous offrons des modèles de tarification flexibles incluant des projets à prix fixe, temps et matériaux, et des arrangements d'équipe dédiée. Contactez-nous pour une consultation gratuite et un devis personnalisé."
+        }
+      ]
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "Bridge Global",
+      "description": "Livrer des solutions IT innovantes pour autonomiser les entreprises dans le monde entier. Votre partenaire technologique de confiance."
+    },
+    "quickLinks": "Liens Rapides",
+    "services": "Nos Services",
+    "contact": "Nous Contacter",
+    "address": "123 Tech Street, Silicon Valley, CA 94025",
+    "phone": "+1 (123) 456-7890",
+    "email": "info@itbridgeglobal.com",
+    "copyright": "© {{year}} IT Bridge Global. Tous droits réservés.",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation"
+  }
+}

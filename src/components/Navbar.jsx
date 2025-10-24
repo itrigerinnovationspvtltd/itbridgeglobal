@@ -2,18 +2,24 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Contact', path: '/contact' },
+    { name: t('navbar.home'), path: '/' },
+    { name: t('navbar.about'), path: '/about' },
+    { name: t('navbar.services'), path: '/services' },
+    { name: t('navbar.portfolio'), path: '/portfolio' },
+    { name: t('navbar.contact'), path: '/contact' },
   ];
+
+  const handleLanguageChange = (e) => {
+    i18n.changeLanguage(e.target.value);
+  };
 
   const isActive = (path) => location.pathname === path;
 
@@ -72,14 +78,17 @@ const Navbar = () => {
                 to="/contact" 
                 className="ml-4 px-6 py-2.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30"
               >
-                Get Started →
+                {t('navbar.getStarted')}
               </Link>
             </motion.div>
               {/* Language Selector */}
-            <select className="ml-4 px-3 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+            <select 
+              className="ml-4 px-3 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:border-primary hover:text-primary focus:outline-none focus:ring-2 focus:ring-primary"
+              value={i18n.language}
+              onChange={handleLanguageChange}
             >
               <option value="en">English</option>
-              <option value="fr">French</option>
+              <option value="fr">Français</option>
             </select>
             
           </div>
@@ -123,8 +132,19 @@ const Navbar = () => {
                   onClick={() => setIsOpen(false)}
                   className="block mx-4 text-center btn-primary"
                 >
-                  Get Started
+                  {t('navbar.getStarted')}
                 </Link>
+                {/* Mobile Language Selector */}
+                <div className="px-4 py-2">
+                  <select 
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white focus:outline-none focus:ring-2 focus:ring-primary"
+                    value={i18n.language}
+                    onChange={handleLanguageChange}
+                  >
+                    <option value="en">English</option>
+                    <option value="fr">Français</option>
+                  </select>
+                </div>
               </div>
             </motion.div>
           )}

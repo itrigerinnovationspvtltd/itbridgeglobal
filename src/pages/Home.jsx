@@ -1,47 +1,44 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { 
   FaCode, FaMobile, FaCloud, FaTasks, FaShieldAlt, FaChartLine,
   FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay,FaBoxes,FaNetworkWired
 } from 'react-icons/fa';
 
 const Home = () => {
+  const { t } = useTranslation();
+  
   const services = [
     {
       icon: FaCode,
-      title: 'ABAP Development',
-      description: 'Extensions, interfaces, reports, enhancements and code optimization for ECC & S/4HANA.',
+      title: t('home.services.abap.title'),
+      description: t('home.services.abap.description'),
       color: 'from-primary-orange to-red-500'
     },
     {
-      icon: FaChartLine,
-      title: 'FI/CO Council',
-  description: 'Financials and Controlling governance, best practices, and integration guidance for SAP solutions.',
- color: 'from-primary-teal to-blue-500'
+      icon: FaMobile,
+      title: t('home.services.functional.title'),
+      description: t('home.services.functional.description'),
+      color: 'from-primary-teal to-blue-500'
     },
     {
-      icon: FaBoxes,
-  title: 'MM/SD/PP Council',
-  description: 'Expert collaboration on Materials Management, Sales & Distribution, and Production Planning for streamlined SAP operations.',
-   color: 'from-primary-green to-teal-500'
+      icon: FaCloud,
+      title: t('home.services.architecture.title'),
+      description: t('home.services.architecture.description'),
+      color: 'from-primary-green to-teal-500'
     },
     {
-      icon: FaNetworkWired,
-  title: 'SAP Architecture',
-  description: 'Designing scalable, secure, and high-performing SAP landscapes ensuring seamless system integration and modernization.',
-  color: 'from-purple-500 to-pink-500'
+      icon: FaDatabase,
+      title: t('home.services.project.title'),
+      description: t('home.services.project.description'),
+      color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: FaTasks,
-  title: 'Project Management',
-  description: 'Ensuring successful SAP project delivery through planning, execution, risk control, and stakeholder alignment.',
-  color: 'from-primary-red to-orange-500'
-    },
-    {
-      icon: FaRocket,
-  title: 'S/4HANA Migration',
-  description: 'Planning and executing seamless migration to S/4HANA, including data transition, system conversion, and process optimization.',
-  color: 'from-primary-red to-orange-500'
+      icon: FaShieldAlt,
+      title: t('home.services.migration.title'),
+      description: t('home.services.migration.description'),
+      color: 'from-primary-red to-orange-500'
     },
   ];
 
@@ -70,10 +67,10 @@ const Home = () => {
   ];
 
   const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '200+', label: 'Happy Clients' },
-    { number: '50+', label: 'Team Members' },
-    { number: '15+', label: 'Years Experience' },
+    { number: '500+', label: t('home.stats.projects') },
+    { number: '200+', label: t('home.stats.clients') },
+    { number: '50+', label: t('home.stats.team') },
+    { number: '15+', label: t('home.stats.experience') },
   ];
 
   const containerVariants = {
@@ -172,7 +169,7 @@ const Home = () => {
               >
                 <span className="px-6 py-2 bg-gradient-to-r from-primary to-primary/80 text-white rounded-full text-sm font-semibold shadow-lg shadow-primary/30 flex items-center gap-2 w-fit">
                   <FaRocket className="animate-pulse" />
-                  Leading IT Solutions Provider
+                  {t('home.badge')}
                 </span>
               </motion.div>
 
@@ -183,9 +180,9 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.8 }}
               >
-                Transform Your
+                {t('home.title')}
                 <span className="block mt-2 bg-gradient-to-r from-primary via-primary/90 to-purple-600 bg-clip-text text-transparent">
-                  Digital Future
+                  {t('home.titleHighlight')}
                 </span>
               </motion.h1>
               
@@ -195,7 +192,7 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                We craft innovative IT solutions that empower businesses to thrive in the digital age. From web development to cloud infrastructure, we turn your vision into reality.
+                {t('home.subtitle')}
               </motion.p>
               
               {/* CTA Buttons */}
@@ -210,7 +207,7 @@ const Home = () => {
                     to="/contact" 
                     className="group px-8 py-4 bg-primary text-white font-bold text-lg rounded-xl hover:bg-primary/90 transition-all duration-300 shadow-xl shadow-primary/30 hover:shadow-2xl hover:shadow-primary/40 flex items-center gap-2"
                   >
-                    Get Started Free
+                    {t('home.getStartedFree')}
                     <motion.span
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
@@ -225,7 +222,7 @@ const Home = () => {
                     <div className="w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-colors">
                       <FaPlay className="text-primary group-hover:text-white text-sm" />
                     </div>
-                    Watch Demo
+                    {t('home.watchDemo')}
                   </button>
                 </motion.div>
               </motion.div>
@@ -339,10 +336,10 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              Our <span className="text-primary">Services</span>
+              {t('home.services.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive IT solutions designed to accelerate your business growth
+              {t('home.services.subtitle')}
             </p>
           </motion.div>
 
@@ -365,7 +362,7 @@ const Home = () => {
                   to="/services"
                   className="inline-flex items-center text-primary font-semibold hover:gap-2 transition-all duration-300"
                 >
-                  Learn More
+                  {t('home.services.learnMore')}
                   <span className="ml-2">→</span>
                 </Link>
               </motion.div>
@@ -399,19 +396,14 @@ const Home = () => {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why Choose <span className="text-primary">IT Bridge Global?</span>
+                {t('home.about.title')}
               </h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                With over 15 years of experience in the IT industry, we've helped hundreds of businesses transform their digital presence and achieve their goals.
+                {t('home.about.subtitle')}
               </p>
               
               <div className="space-y-4 mb-8">
-                {[
-                  'Experienced team of certified professionals',
-                  'Cutting-edge technology solutions',
-                  'Proven track record of success',
-                  'Dedicated support and maintenance',
-                ].map((item, index) => (
+                {t('home.about.features', { returnObjects: true }).map((item, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -429,7 +421,7 @@ const Home = () => {
               </div>
 
               <Link to="/about" className="px-8 py-4 bg-primary text-white font-bold text-lg rounded-lg hover:bg-primary/90 transition-all duration-300 inline-block">
-                Learn More About Us
+                {t('home.about.learnMore')}
               </Link>
             </motion.div>
           </div>
@@ -447,10 +439,10 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              What Our <span className="text-primary">Clients Say</span>
+              {t('home.testimonials.title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it - hear from businesses we've helped succeed
+              {t('home.testimonials.subtitle')}
             </p>
           </motion.div>
 
@@ -500,10 +492,10 @@ const Home = () => {
             className="text-center text-white"
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Ready to Transform Your Business?
+              {t('home.cta.title')}
             </h2>
             <p className="text-xl mb-10 opacity-95 max-w-3xl mx-auto leading-relaxed">
-              Let's discuss how our IT solutions can help you achieve your business goals and drive growth
+              {t('home.cta.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -511,14 +503,14 @@ const Home = () => {
                 to="/contact"
                 className="px-10 py-4 bg-white text-primary font-bold text-lg rounded-lg hover:bg-gray-100 transition-all duration-300"
               >
-                Get Started Today
+                {t('home.cta.getStarted')}
               </Link>
               
               <Link
                 to="/services"
                 className="px-10 py-4 border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                View Our Services
+                {t('home.cta.viewServices')}
               </Link>
             </div>
           </motion.div>
