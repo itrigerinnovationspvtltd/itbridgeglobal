@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 import { 
   FaRocket, FaEye, FaHeart, FaAward, FaCertificate, FaTrophy,
   FaUsers, FaLightbulb, FaHandshake
@@ -9,7 +10,7 @@ import {
 const About = () => {
   const { t } = useTranslation();
   
-  const values = [
+  const values = useMemo(() => [
     {
       icon: FaLightbulb,
       title: t('about.values.innovation.title'),
@@ -34,9 +35,9 @@ const About = () => {
       description: t('about.values.collaboration.description'),
       color: 'from-purple-500 to-pink-500'
     },
-  ];
+  ], [t]);
 
-  const achievements = [
+  const achievements = useMemo(() => [
     {
       icon: FaAward,
       title: t('about.achievements.iso.title'),
@@ -52,7 +53,7 @@ const About = () => {
       title: t('about.achievements.award.title'),
       description: t('about.achievements.award.description'),
     },
-  ];
+  ], [t]);
 
   const team = [
     {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock,
@@ -54,7 +54,7 @@ const Contact = () => {
     }, 3000);
   };
 
-  const contactInfo = [
+  const contactInfo = useMemo(() => [
     {
       icon: FaPhone,
       title: t('contact.contactInfo.phone'),
@@ -79,7 +79,7 @@ const Contact = () => {
       details: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 4:00 PM'],
       color: 'from-purple-500 to-pink-500'
     },
-  ];
+  ], [t, language]);
 
   const socialLinks = [
     { icon: FaFacebookF, url: '#', color: 'hover:bg-blue-600', name: 'Facebook' },

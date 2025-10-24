@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo } from 'react';
 import { 
   FaCode, FaMobile, FaCloud, FaDatabase, FaShieldAlt, FaChartLine,
   FaCog, FaRobot, FaNetworkWired, FaLaptopCode, FaServer, FaGlobe,
@@ -17,13 +17,10 @@ const Services = () => {
       setLanguage(lng);
     };
 
-    i18n.on('languageChanged', handleLanguageChange);
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
-    };
+   
   }, [i18n]);
   
-  const allServices = [
+  const allServices = useMemo(() => [
     {
       icon: FaCode,
       title: t('services.serviceCards.abap.title'),
@@ -72,105 +69,7 @@ const Services = () => {
       features: t('services.serviceCards.migration.features', { returnObjects: true }),
       technologies: ['SAP S/4HANA', 'SAP BTP', 'SAP Migration Cockpit', 'Azure', 'AWS', 'Google Cloud']
     },
-    // {
-    //   icon: FaChartLine,
-    //   title: 'IT Consulting',
-    //   description: 'Strategic technology consulting to align IT initiatives with your business objectives.',
-    //   color: 'from-indigo-500 to-primary-teal',
-    //   features: [
-    //     'Digital transformation',
-    //     'Technology strategy',
-    //     'Process optimization',
-    //     'IT roadmap planning',
-    //     'Change management'
-    //   ],
-    //   technologies: ['Agile', 'ITIL', 'Six Sigma', 'SAFe', 'Lean']
-    // },
-    // {
-    //   icon: FaRobot,
-    //   title: 'AI & Machine Learning',
-    //   description: 'Harness the power of artificial intelligence to automate processes and gain competitive advantage.',
-    //   color: 'from-pink-500 to-purple-500',
-    //   features: [
-    //     'Machine learning models',
-    //     'Natural language processing',
-    //     'Computer vision',
-    //     'Chatbots & virtual assistants',
-    //     'Predictive analytics'
-    //   ],
-    //   technologies: ['TensorFlow', 'PyTorch', 'OpenAI', 'Scikit-learn', 'Python']
-    // },
-    // {
-    //   icon: FaNetworkWired,
-    //   title: 'Network Infrastructure',
-    //   description: 'Design, implementation, and management of robust network infrastructure solutions.',
-    //   color: 'from-blue-500 to-cyan-500',
-    //   features: [
-    //     'Network design',
-    //     'Infrastructure setup',
-    //     'Network security',
-    //     'Performance monitoring',
-    //     'Network optimization'
-    //   ],
-    //   technologies: ['Cisco', 'Juniper', 'SD-WAN', 'VPN', 'Load Balancers']
-    // },
-    // {
-    //   icon: FaLaptopCode,
-    //   title: 'Software Development',
-    //   description: 'Custom software solutions tailored to your unique business requirements and workflows.',
-    //   color: 'from-green-500 to-emerald-500',
-    //   features: [
-    //     'Enterprise software',
-    //     'Custom applications',
-    //     'API development',
-    //     'Software integration',
-    //     'Legacy modernization'
-    //   ],
-    //   technologies: ['Java', '.NET', 'Python', 'Go', 'Microservices']
-    // },
-    // {
-    //   icon: FaServer,
-    //   title: 'Managed IT Services',
-    //   description: '24/7 IT support and management to keep your systems running smoothly and securely.',
-    //   color: 'from-orange-500 to-red-500',
-    //   features: [
-    //     '24/7 monitoring',
-    //     'Help desk support',
-    //     'System maintenance',
-    //     'Backup & recovery',
-    //     'Performance optimization'
-    //   ],
-    //   technologies: ['ITSM', 'Remote monitoring', 'Automation', 'Backup solutions']
-    // },
-    // {
-    //   icon: FaGlobe,
-    //   title: 'Digital Marketing',
-    //   description: 'Comprehensive digital marketing strategies to grow your online presence and reach.',
-    //   color: 'from-teal-500 to-blue-500',
-    //   features: [
-    //     'SEO optimization',
-    //     'Social media marketing',
-    //     'Content marketing',
-    //     'PPC campaigns',
-    //     'Email marketing'
-    //   ],
-    //   technologies: ['Google Analytics', 'SEMrush', 'HubSpot', 'Mailchimp', 'Google Ads']
-    // },
-    // {
-    //   icon: FaCog,
-    //   title: 'Process Automation',
-    //   description: 'Streamline operations and reduce costs with intelligent process automation solutions.',
-    //   color: 'from-primary-orange to-yellow-500',
-    //   features: [
-    //     'Robotic process automation',
-    //     'Workflow automation',
-    //     'Business process management',
-    //     'Integration services',
-    //     'Custom automation tools'
-    //   ],
-    //   technologies: ['UiPath', 'Automation Anywhere', 'Zapier', 'Power Automate']
-    // },
-  ];
+  ], [t, i18n.language]);
 
   const process = [
     {
@@ -220,6 +119,9 @@ const Services = () => {
     visible: {
       y: 0,
       opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
     },
   };
 
@@ -235,10 +137,10 @@ const Services = () => {
             transition={{ duration: 0.6 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6" key={language}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6" key={i18n.language}>
               {t('services.title')}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto" key={language}>
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto" key={i18n.language}>
               {t('services.subtitle')}
             </p>
           </motion.div>
@@ -272,7 +174,7 @@ const Services = () => {
           >
             {allServices.map((service, index) => (
               <motion.div
-                key={index}
+                key={`${index}-${i18n.language}`}
                 variants={itemVariants}
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
@@ -356,7 +258,7 @@ const Services = () => {
           >
             {process.map((item, index) => (
               <motion.div
-                key={index}
+                key={`${index}-${i18n.language}`}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 className="relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300"
@@ -394,7 +296,7 @@ const Services = () => {
               <div className="space-y-6">
                 {t('services.whyChoose.benefits', { returnObjects: true }).map((benefit, index) => (
                   <motion.div
-                    key={index}
+                    key={`${index}-${i18n.language}`}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

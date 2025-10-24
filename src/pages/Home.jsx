@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useMemo } from 'react';
 import { 
   FaCode, FaMobile, FaCloud, FaTasks, FaShieldAlt, FaChartLine,
   FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay, FaBoxes, FaNetworkWired, FaDatabase
@@ -9,7 +10,7 @@ import {
 const Home = () => {
   const { t } = useTranslation();
   
-  const services = [
+  const services = useMemo(() => [
     {
       icon: FaCode,
       title: t('home.services.abap.title'),
@@ -40,7 +41,7 @@ const Home = () => {
       description: t('home.services.migration.description'),
       color: 'from-primary-red to-orange-500'
     },
-  ];
+  ], [t]);
 
   const testimonials = [
     {
@@ -66,12 +67,12 @@ const Home = () => {
     },
   ];
 
-  const stats = [
+  const stats = useMemo(() => [
     { number: '500+', label: t('home.stats.projects') },
     { number: '200+', label: t('home.stats.clients') },
     { number: '50+', label: t('home.stats.team') },
     { number: '15+', label: t('home.stats.experience') },
-  ];
+  ], [t]);
 
   const containerVariants = {
     hidden: { opacity: 0 },

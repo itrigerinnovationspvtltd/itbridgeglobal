@@ -26,9 +26,9 @@ const Portfolio = () => {
     { id: 'mobile', name: t('portfolio.categories.mobile') },
     { id: 'cloud', name: t('portfolio.categories.cloud') },
     { id: 'ecommerce', name: t('portfolio.categories.ecommerce') },
-  ], [t, i18n.language]);
+  ], [t, language]);
 
-  const projects = [
+  const projects = useMemo(() => [
     {
       id: 1,
       title: t('portfolio.projects.ecommerce.title'),
@@ -125,7 +125,7 @@ const Portfolio = () => {
       link: '#',
       color: 'from-pink-500 to-purple-500'
     },
-  ];
+  ], [t, language]);
 
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
