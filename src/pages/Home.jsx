@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { 
-  FaCode, FaMobile, FaCloud, FaDatabase, FaShieldAlt, FaChartLine,
-  FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay
+  FaCode, FaMobile, FaCloud, FaTasks, FaShieldAlt, FaChartLine,
+  FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay,FaBoxes,FaNetworkWired
 } from 'react-icons/fa';
 
 const Home = () => {
@@ -14,28 +14,34 @@ const Home = () => {
       color: 'from-primary-orange to-red-500'
     },
     {
-      icon: FaMobile,
-      title: 'Functional advice',
-      description: 'FI, CO, MM, SD, PP expertise: process design, configuration and user training.',
-      color: 'from-primary-teal to-blue-500'
+      icon: FaChartLine,
+      title: 'FI/CO Council',
+  description: 'Financials and Controlling governance, best practices, and integration guidance for SAP solutions.',
+ color: 'from-primary-teal to-blue-500'
     },
     {
-      icon: FaCloud,
-      title: 'Architecture & Solution',
-      description: 'Design of SAP architectures (on-prem / cloud / hybrid), integration and security.',
-      color: 'from-primary-green to-teal-500'
+      icon: FaBoxes,
+  title: 'MM/SD/PP Council',
+  description: 'Expert collaboration on Materials Management, Sales & Distribution, and Production Planning for streamlined SAP operations.',
+   color: 'from-primary-green to-teal-500'
     },
     {
-      icon: FaDatabase,
-      title: 'Project management',
-      description: 'Steering, planning, quality, budgets and change management for your implementations.',
-      color: 'from-purple-500 to-pink-500'
+      icon: FaNetworkWired,
+  title: 'SAP Architecture',
+  description: 'Designing scalable, secure, and high-performing SAP landscapes ensuring seamless system integration and modernization.',
+  color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: FaShieldAlt,
-      title: 'Migration & Modernization',
-      description: 'S/4HANA migration strategies, data preparation and technical migration execution.',
-      color: 'from-primary-red to-orange-500'
+      icon: FaTasks,
+  title: 'Project Management',
+  description: 'Ensuring successful SAP project delivery through planning, execution, risk control, and stakeholder alignment.',
+  color: 'from-primary-red to-orange-500'
+    },
+    {
+      icon: FaRocket,
+  title: 'S/4HANA Migration',
+  description: 'Planning and executing seamless migration to S/4HANA, including data transition, system conversion, and process optimization.',
+  color: 'from-primary-red to-orange-500'
     },
   ];
 

@@ -13,10 +13,11 @@ const Footer = () => {
 
   const services = [
     'ABAP Development',
-    'Functional advice',
-    'Architecture & Solution',
-    'Project management',
-    'Migration & Modernization',
+    'FI/CO Council',
+    'MM/SD/PP Council',
+    'SAP Architecture',
+    'Project Management',
+    'S/4HANA Migration',
   ];
 
   const socialLinks = [
@@ -108,13 +109,13 @@ const Footer = () => {
               <li className="flex items-center space-x-3">
                 <FaPhone className="text-primary flex-shrink-0" />
                 <a href="tel:+11234567890" className="text-gray-400 hover:text-primary transition-colors">
-                  +1 (123) 456-7890
+                  +33 1 23 45 67 89
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <FaEnvelope className="text-primary flex-shrink-0" />
                 <a href="mailto:info@itbridgeglobal.com" className="text-gray-400 hover:text-primary transition-colors">
-                  info@itbridgeglobal.com
+                  contact@itbridgeglobal.com
                 </a>
               </li>
             </ul>
