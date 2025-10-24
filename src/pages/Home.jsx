@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { 
   FaCode, FaMobile, FaCloud, FaTasks, FaShieldAlt, FaChartLine,
-  FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay,FaBoxes,FaNetworkWired
+  FaStar, FaQuoteLeft, FaCheck, FaRocket, FaPlay, FaBoxes, FaNetworkWired, FaDatabase
 } from 'react-icons/fa';
 
 const Home = () => {
@@ -218,7 +218,7 @@ const Home = () => {
                 </motion.div>
                 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <button className="px-8 py-4 border-2 border-gray-300 text-gray-700 font-bold text-lg rounded-xl hover:border-primary hover:text-primary transition-all duration-300 flex items-center gap-2 group">
+                  <button className="px-8 py-2 border-2 border-gray-300 text-gray-700 font-bold text-lg rounded-xl hover:border-primary hover:text-primary transition-all duration-300 flex items-center gap-2 group">
                     <div className="w-10 h-10 rounded-full bg-primary/10 group-hover:bg-primary flex items-center justify-center transition-colors">
                       <FaPlay className="text-primary group-hover:text-white text-sm" />
                     </div>

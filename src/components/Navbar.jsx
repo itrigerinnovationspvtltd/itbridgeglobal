@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
@@ -8,6 +8,18 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setLanguage(lng);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
 
   const navLinks = [
     { name: t('navbar.home'), path: '/' },
@@ -51,7 +63,7 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-1">
             {navLinks.map((link) => (
               <Link
-                key={link.path}
+                key={`${link.path}-${language}`}
                 to={link.path}
                 className={`relative px-4 py-2 font-medium transition-all duration-300 rounded-lg ${
                   isActive(link.path)
@@ -115,7 +127,7 @@ const Navbar = () => {
               <div className="py-4 space-y-4">
                 {navLinks.map((link) => (
                   <Link
-                    key={link.path}
+                    key={`${link.path}-${language}`}
                     to={link.path}
                     onClick={() => setIsOpen(false)}
                     className={`block px-4 py-2 rounded-lg transition-colors ${

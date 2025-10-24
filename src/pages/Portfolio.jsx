@@ -1,12 +1,24 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaExternalLinkAlt, FaCode, FaMobile, FaCloud, FaShoppingCart } from 'react-icons/fa';
 
 const Portfolio = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [language, setLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setLanguage(lng);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
 
   const categories = useMemo(() => [
     { id: 'all', name: t('portfolio.categories.all') },
@@ -14,7 +26,7 @@ const Portfolio = () => {
     { id: 'mobile', name: t('portfolio.categories.mobile') },
     { id: 'cloud', name: t('portfolio.categories.cloud') },
     { id: 'ecommerce', name: t('portfolio.categories.ecommerce') },
-  ], [t]);
+  ], [t, i18n.language]);
 
   const projects = [
     {
@@ -149,10 +161,10 @@ const Portfolio = () => {
             transition={{ duration: 0.6 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6" key={language}>
               {t('portfolio.title')}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto" key={language}>
               {t('portfolio.subtitle')}
             </p>
           </motion.div>

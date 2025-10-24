@@ -174,9 +174,9 @@ const About = () => {
               className="bg-secondary rounded-2xl p-10 text-white"
             >
               <FaRocket className="text-5xl mb-6" />
-              <h2 className="text-3xl font-bold mb-4">Our Mission</h2>
+              <h2 className="text-3xl font-bold mb-4">{t('about.mission.title')}</h2>
               <p className="text-lg leading-relaxed opacity-90">
-                To empower businesses with innovative, reliable, and scalable IT solutions that drive growth, efficiency, and competitive advantage in the digital age.
+                {t('about.mission.content')}
               </p>
             </motion.div>
 
@@ -188,9 +188,9 @@ const About = () => {
               className="bg-primary rounded-2xl p-10 text-white"
             >
               <FaEye className="text-5xl mb-6" />
-              <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+              <h2 className="text-3xl font-bold mb-4">{t('about.vision.title')}</h2>
               <p className="text-lg leading-relaxed opacity-90">
-                To be the world's most trusted technology partner, recognized for excellence, innovation, and transformative impact on businesses globally.
+                {t('about.vision.content')}
               </p>
             </motion.div>
           </div>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { 
   FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock,
@@ -7,7 +7,8 @@ import {
 } from 'react-icons/fa';
 
 const Contact = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -17,6 +18,17 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setLanguage(lng);
+    };
+
+    i18n.on('languageChanged', handleLanguageChange);
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
 
   const handleChange = (e) => {
     setFormData({
@@ -106,10 +118,10 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center text-white"
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6" key={language}>
               {t('contact.title')}
             </h1>
-            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto" key={language}>
               {t('contact.subtitle')}
             </p>
           </motion.div>
@@ -308,7 +320,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links */}
-              <div className="bg-gradient-to-br from-primary-teal to-primary-orange rounded-2xl p-8 text-white">
+              <div className="bg-primary rounded-2xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-4">{t('contact.connect.title')}</h3>
                 <p className="mb-6 opacity-90">
                   {t('contact.connect.subtitle')}
@@ -318,7 +330,7 @@ const Contact = () => {
                     <a
                       key={index}
                       href={social.url}
-                      className={`w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center transition-all duration-300 ${social.color}`}
+                      className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-white/30 transition-all duration-300"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={social.name}
